@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Next Chapter™ — Free Mini-Book | Mike Schindler</title>
+<meta name="description" content="A short guide for successful people navigating What's Next? — Mike's story, the 8s, Decision Architecture™, and how The Next Chapter™ works. About 15–20 minutes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .reveal { opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity:1; transform:none; }
+  .btn-gold { transition:background .2s ease; }
+  .btn-gold:hover { background:#e6b562 !important; color:#0a1420; }
+  @media print {
+    header, footer, #mb-hero-actions, #mb-jump, .mb-print-hide { display:none !important; }
+    /* Each chapter starts on a fresh page, but its own content must be free
+       to paginate normally across several pages — a chapter is far taller
+       than one printed page. break-inside:avoid-page here would force the
+       whole chapter into a single non-breaking block and silently truncate
+       everything past the first page (confirmed: an earlier build of this
+       rule produced a 1-page-of-content PDF). Only small, genuinely
+       single-unit cards get avoid treatment. */
+    .mb-chapter { break-before:page; }
+    .mb-chapter:first-of-type { break-before:auto; }
+    .mb-def-item, .mb-timeline-item, .mb-path-card, .mb-pullquote { break-inside:avoid; }
+    .reveal { opacity:1 !important; transform:none !important; }
+    body { background:#ffffff !important; }
+  }
+  @media (max-width:900px) {
+    #mb-hero-inner { padding:64px 24px 56px !important; }
+    #mb-hero-title { font-size:44px !important; }
+    .mb-chapter-inner { padding:56px 24px !important; }
+    .mb-timeline { grid-template-columns:1fr !important; }
+    #mb-close-grid { grid-template-columns:1fr !important; gap:28px !important; }
+  }
+  @media (max-width:620px) {
+    #mb-hero-title { font-size:34px !important; }
+    .mb-h1 { font-size:28px !important; }
+    .mb-pullquote { font-size:22px !important; }
+    .mb-def-grid.mb-grid-5, .mb-def-grid.mb-grid-4, .mb-def-grid.mb-grid-3 { grid-template-columns:1fr !important; }
+  }
+</style>
+</head>
+<body>
+<div style="font-family:'Inter',sans-serif; background:#0a1420; overflow-x:clip;">
+
+  <!-- HEADER -->
+  <header style="position:sticky; top:0; z-index:100; background:#0a1420; box-shadow:0 1px 0 #1c2733;">
+    <div id="header-inner" style="display:flex; align-items:center; justify-content:space-between; padding:20px 60px; max-width:1200px; margin:0 auto;">
+      <a href="index.html" style="display:flex; flex-direction:column; line-height:1.1; text-decoration:none;">
+        <span style="font-family:'Oswald',sans-serif; font-weight:700; font-size:20px; letter-spacing:0.5px; color:#f5f2ec;">MIKE SCHINDLER</span>
+        <span style="font-family:'Oswald',sans-serif; font-weight:500; font-size:11px; letter-spacing:1.5px; color:#d9a13f;">DECISION ARCHITECT</span>
+      </a>
+      <nav style="display:flex; gap:32px; white-space:nowrap;" id="main-nav">
+        <a class="nav-link" href="index.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">HOME</a>
+        <a class="nav-link" href="about.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">ABOUT</a>
+        <a class="nav-link" href="what-i-do.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">WHAT I DO</a>
+        <a class="nav-link" href="programs.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">PROGRAMS</a>
+        <a class="nav-link" href="speaking.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">SPEAKING</a>
+        <a class="nav-link" href="resources.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">RESOURCES</a>
+        <a class="nav-connect" href="connect.html" style="font-size:13px;">LET'S CONNECT</a>
+      </nav>
+      <a id="header-connect" href="connect.html" style="background:#d9a13f; color:#0a1420; font-size:13px; font-weight:700; letter-spacing:0.5px; padding:12px 22px; border-radius:3px; white-space:nowrap; text-decoration:none;">LET'S CONNECT</a>
+      <button id="menu-toggle" style="display:none; background:none; border:none; color:#fff; font-size:26px; cursor:pointer;">☰</button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section style="position:relative; background:#0a1420; overflow:hidden;">
+    <div style="position:absolute; inset:0; background:url('assets/mike-portrait.png') center 15%/cover no-repeat; filter:blur(10px) brightness(0.22); transform:scale(1.1);"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,20,32,0.88) 0%, rgba(10,20,32,0.94) 60%, #0a1420 100%);"></div>
+    <div id="mb-hero-inner" class="reveal" style="position:relative; max-width:760px; margin:0 auto; text-align:center; padding:88px 60px 68px;">
+
+      <div id="mb-hero-default">
+        <p style="font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:2px; color:#d9a13f; margin:0 0 16px;">A FREE MINI-BOOK FROM MIKE SCHINDLER</p>
+      </div>
+      <div id="mb-hero-fromassessment" style="display:none;">
+        <p style="font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:2px; color:#d9a13f; margin:0 0 16px;">YOUR RESULTS ARE JUST THE BEGINNING</p>
+        <p style="font-size:15px; line-height:1.7; color:#c3ccd3; margin:0 0 22px; max-width:520px; margin-left:auto; margin-right:auto;">Your assessment shows where you&rsquo;re clear&mdash;and where your next chapter may need more attention. I wrote a short guide for successful people navigating this exact question.</p>
+      </div>
+
+      <h1 id="mb-hero-title" style="font-family:'Anton',sans-serif; font-weight:400; font-size:58px; line-height:1.05; color:#ffffff; margin:0 0 18px; letter-spacing:1px;">THE NEXT CHAPTER&trade;</h1>
+      <p style="font-size:19px; line-height:1.5; font-weight:500; color:#e8ecef; margin:0 0 8px;">You&rsquo;ve built a successful life. Now comes a surprisingly difficult question:</p>
+      <p style="font-family:'Anton',sans-serif; font-size:24px; letter-spacing:0.5px; color:#d9a13f; margin:0 0 30px;">WHAT DO YOU WANT NEXT?</p>
+
+      <div style="display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:14px;" id="mb-hero-actions">
+        <a class="btn-gold" href="assets/the-next-chapter-mini-book.pdf" download style="display:inline-block; background:#d9a13f; color:#0a1420; font-family:'Oswald',sans-serif; font-size:14px; font-weight:700; letter-spacing:0.5px; padding:17px 30px; border-radius:3px; text-decoration:none;">DOWNLOAD THE FREE MINI-BOOK &rarr;</a>
+        <a class="btn-ghost" href="#chapter-01">START READING &darr;</a>
+      </div>
+      <p style="font-size:11px; letter-spacing:0.5px; color:#7c868f; margin:0 0 22px;">FREE &middot; ABOUT 15&ndash;20 MINUTES</p>
+
+      <div style="width:48px; height:2px; background:#d9a13f; margin:26px auto 22px;"></div>
+      <p style="font-family:'Oswald',sans-serif; font-size:11px; font-weight:600; letter-spacing:1.2px; color:#8b95a0; margin:0;">A PRIVATE DECISION ARCHITECTURE&trade; ENGAGEMENT WITH MICHAEL SCHINDLER</p>
+    </div>
+  </section>
+
+  <!-- CHAPTER ONE: WHEN THE QUESTION CHANGES -->
+  <section class="mb-chapter mb-bg-cream" id="chapter-01">
+    <div class="mb-chapter-inner reveal">
+      <p class="mb-chapter-label">01 &middot; CHAPTER ONE</p>
+      <h2 class="mb-h1">WHEN THE QUESTION CHANGES</h2>
+        <p class="mb-body">There’s a strange thing that can happen after you become successful.</p>
+        <p class="mb-body">The questions that got you here stop being the questions that matter.</p>
+        <p class="mb-body">Earlier in life, the questions may have been relatively straightforward: How do I build a career? How do I provide for my family? How do I grow the business? How do I earn the promotion? How do I prove myself? How do I succeed?</p>
+        <p class="mb-body">So you built. You achieved. You accumulated experience, relationships, responsibilities, resources, accomplishments—and probably a few scars along the way.</p>
+        <p class="mb-pullquote">WHAT DO I ACTUALLY WANT NOW?</p>
+        <p class="mb-body">That question can be surprisingly difficult for successful people to answer. Not because you’ve failed. Quite the opposite. You may have more options than you’ve ever had before. And that can be the problem.</p>
+        <h3 class="mb-h2">NOTHING HAS TO BE WRONG</h3>
+        <p class="mb-body">You don’t have to hate your job. Your business doesn’t have to be failing. Your life doesn’t need to be falling apart. You don’t need to be burned out, miserable or in crisis.</p>
+        <p class="mb-body">Sometimes life is actually pretty damn good. It just may not fit anymore.</p>
+        <ul class="mb-list">
+          <li>You’re thinking about selling the business.</li>
+          <li>Retirement is suddenly visible on the horizon.</li>
+          <li>You accomplished the thing you spent twenty years chasing—and aren’t sure what comes after it.</li>
+          <li>You’ve been offered an opportunity that looks fantastic on paper.</li>
+          <li>The mission that defined you is ending.</li>
+          <li>Nothing dramatic happened. You simply don’t want the next ten years to look exactly like the last ten.</li>
+        </ul>
+        <p class="mb-body">That doesn’t mean the last chapter was wrong. It may simply mean you’re ready for another one.</p>
+        <h3 class="mb-h2">THE SUCCESS TRAP</h3>
+        <p class="mb-body">Success gives you something wonderful: options.</p>
+        <p class="mb-body">It also gives you something considerably more complicated: things to lose.</p>
+        <ul class="mb-list">
+          <li>Income</li>
+          <li>Identity</li>
+          <li>Status</li>
+          <li>Reputation</li>
+          <li>Relationships</li>
+          <li>Lifestyle</li>
+          <li>Security</li>
+          <li>The story you’ve spent years telling yourself about who you are</li>
+        </ul>
+        <p class="mb-body">So you do what smart, successful people do. You think. You make the spreadsheet. You talk to people you trust. You read another book. You ask AI. You imagine five different futures. You convince yourself of one on Tuesday and talk yourself out of it by Thursday.</p>
+        <p class="mb-pullquote">How much of your life do you want to spend figuring it out?</p>
+    </div>
+  </section>
+
+  <!-- CHAPTER TWO: I KNOW THIS QUESTION -->
+  <section class="mb-chapter mb-bg-navy" id="chapter-02">
+    <div class="mb-chapter-inner reveal">
+      <p class="mb-chapter-label">02 &middot; CHAPTER TWO</p>
+      <h2 class="mb-h1">I KNOW THIS QUESTION</h2>
+        <p class="mb-body">I didn’t create The Next Chapter™ because I figured life out.</p>
+        <p class="mb-body">I created it because “What’s next?” has hit me in the face more than once.</p>
+        <p class="mb-body">The first time I really understood the question was after I left the Navy.</p>
+        <p class="mb-body">When I joined the military, something interesting happened. The military gave me three things most people spend a lifetime trying to figure out:</p>
+        <p class="mb-pullquote">MISSION. PURPOSE. IDENTITY.</p>
+        <p class="mb-body">My mission was clear. It came through commander’s intent. I understood what needed to be accomplished and my role in accomplishing it.</p>
+        <p class="mb-body">My purpose felt clear too. In very simple terms, I was helping protect people and helping save the world from bad people.</p>
+        <p class="mb-body">And my identity? That might have been clearest of all. I wore it. My uniform told people who I was. My rank told me where I fit. My unit told me where I belonged.</p>
+        <p class="mb-body">Then I left the military. Almost overnight: no uniform, no rank, no commander’s intent, no institution telling me where I belonged or what mattered next.</p>
+        <p class="mb-pullquote">WHO AM I WITHOUT ALL OF THAT?</p>
+        <p class="mb-body">I didn’t have a very good answer. So I did what a lot of ambitious people do when they don’t know who they are: I started trying to prove it.</p>
+        <h3 class="mb-h2">WHEN ACHIEVEMENT BECOMES IDENTITY</h3>
+        <p class="mb-body">After college, I chased opportunity. I chased achievement. And I chased money.</p>
+        <p class="mb-body">I went through 14 different jobs. At the time, I probably would have told you I was ambitious. Looking back, I think something else was happening. I was trying to find an identity.</p>
+        <p class="mb-body">Maybe the next title would do it. Maybe the next opportunity. Maybe making more money. Maybe building something important. Maybe if I became successful enough, I’d finally feel like I amounted to something.</p>
+        <p class="mb-pullquote">I had confused what I did with who I was.</p>
+        <p class="mb-body">And I was horribly wrong.</p>
+        <p class="mb-body">That confusion didn’t only affect my career. It affected my relationships. It affected my marriage.</p>
+        <p class="mb-body">Because there’s an uncomfortable question I’ve had to confront: How could someone truly know and love me when I wasn’t even sure what it meant to be me?</p>
+        <p class="mb-body">Eventually, my first marriage ended. And there was a particularly brutal irony in that: I had written one of the early books about military marriage—and I hadn’t been able to save my own.</p>
+        <p class="mb-body">Talk about imposter syndrome. Suddenly WHAT’S NEXT? wasn’t an interesting intellectual question. It was waiting for me every morning.</p>
+        <h3 class="mb-h2">AND THEN IT HAPPENED AGAIN</h3>
+        <p class="mb-body">For 15 years, during the highs and lows of my own identity crisis and marriage struggles, I led the nonprofit I founded.</p>
+        <p class="mb-body">The work gave me extraordinary opportunities. I worked across government agencies, private industry, startups and community organizations. I wrote books. Entered the film world. Executive produced. Hosted a podcast. Spoke. Advised leaders. Built things.</p>
+        <p class="mb-body">And eventually that chapter ended too.</p>
+        <p class="mb-pullquote">WHAT’S NEXT?</p>
+        <p class="mb-body">This time I had considerably more options. I could consult, speak, build another company, work with executives, produce, write, take a job, or start something completely different.</p>
+        <p class="mb-body">I knew what I could do. That wasn’t the problem. I wasn’t clear about what I actually wanted to do. Those are very different questions.</p>
+        <h3 class="mb-h2">THE ANSWER WASN’T ANOTHER JOB</h3>
+        <p class="mb-body">The breakthrough eventually came through my faith and through some serious examination of the life I had built.</p>
+        <p class="mb-body">I had spent decades answering, “What do you do?” But I hadn’t spent nearly enough time answering, “Who are you?”</p>
+        <p class="mb-pullquote">I AM NOT WHAT I DO.</p>
+        <p class="mb-body">My job can change. My title can disappear. A company can be sold. A career can end. Children grow up. Relationships change. Money comes and goes. Organizations continue without us.</p>
+        <p class="mb-body">If my entire identity is attached to those things, what happens when they’re gone?</p>
+        <p class="mb-body">That realization changed the question. Instead of asking, “What should I do next?” I started asking:</p>
+        <p class="mb-pullquote">Who do I want to be in the life I’m building next?</p>
+    </div>
+  </section>
+
+  <!-- CHAPTER THREE: WHAT DOES AN 8 LOOK LIKE? -->
+  <section class="mb-chapter mb-bg-cream" id="chapter-03">
+    <div class="mb-chapter-inner reveal">
+      <p class="mb-chapter-label">03 &middot; CHAPTER THREE</p>
+      <h2 class="mb-h1">WHAT DOES AN 8 LOOK LIKE?</h2>
+        <p class="mb-body">If I’m not my title, company, rank, income or accomplishments, I need something else against which to make decisions.</p>
+        <p class="mb-body">I need a clearer picture of the life I’m actually trying to build. That’s where the 8s come in.</p>
+        <p class="mb-body">I don’t believe the goal is a perfect life. Perfect is a lousy operating standard. Instead, I use a different target:</p>
+        <p class="mb-pullquote">AN 8.</p>
+        <p class="mb-body">On a scale of 1–10, an 8 is strong, achievable and measurable. Not fantasy. Not perfection. Not someone else’s definition of success. Your 8.</p>
+        <div class="mb-def-grid mb-grid-5">
+          <div class="mb-def-item"><span class="mb-def-k">MENTALLY</span><span class="mb-def-v">Challenge, curiosity, learning, peace, stress, space and energy. What does mentally strong and engaged look like for you now?</span></div>
+          <div class="mb-def-item"><span class="mb-def-k">PHYSICALLY</span><span class="mb-def-v">Energy, movement, sleep, strength and health. What allows you to be physically capable of living the life you say you want?</span></div>
+          <div class="mb-def-item"><span class="mb-def-k">SPIRITUALLY</span><span class="mb-def-v">Faith, purpose, service, gratitude and connection. What grounds you and gives your life meaning beyond achievement?</span></div>
+          <div class="mb-def-item"><span class="mb-def-k">RELATIONSHIPS</span><span class="mb-def-v">Who matters? How do you want the people closest to you to experience you? What does presence look like now?</span></div>
+          <div class="mb-def-item"><span class="mb-def-k">FINANCIALLY</span><span class="mb-def-v">What income, security and lifestyle do you actually need? What is enough—and what are you no longer willing to trade simply to make more?</span></div>
+        </div>
+        <h3 class="mb-h2">NOW THE DECISIONS GET INTERESTING</h3>
+        <p class="mb-body">Once your 8s become clear, you have something incredibly useful: a decision filter.</p>
+        <p class="mb-pullquote">HOW DOES THIS DECISION FEED MY 8s?</p>
+        <p class="mb-body">Suppose you’re offered a job paying 30% more. Financially, maybe it moves you from a 7 to a 9. Great. But what if it requires another 25 nights a year away from home? What happens to your relationship 8? Your physical 8? Your mental 8? Your spiritual 8?</p>
+        <p class="mb-body">Suddenly we’re no longer asking, “Is this a good opportunity?” We’re asking, “Is this a good opportunity for the life I’m trying to build?”</p>
+        <p class="mb-pullquote">A decision can look brilliant on a résumé and still be completely wrong for your life.</p>
+        <p class="mb-body">Your 8s don’t make the decision for you. They help you evaluate it. They turn “I don’t know what I want” into “I know what I’m trying to build.”</p>
+        <p class="mb-body">There will rarely be a decision that improves all five areas equally. The point is to see the tradeoffs before you make them—to make them consciously, know why you’re making them, and decide whether they’re worth it.</p>
+    </div>
+  </section>
+
+  <!-- CHAPTER FOUR: DON’T FIND YOUR NEXT CHAPTER. ARCHITECT IT. -->
+  <section class="mb-chapter mb-bg-navy" id="chapter-04">
+    <div class="mb-chapter-inner reveal">
+      <p class="mb-chapter-label">04 &middot; CHAPTER FOUR</p>
+      <h2 class="mb-h1">DON’T FIND YOUR NEXT CHAPTER. ARCHITECT IT.</h2>
+        <p class="mb-body">Most accomplished people don’t suffer from a lack of intelligence. You probably don’t need someone to tell you what to do. And you certainly don’t need another motivational speech about “following your passion.”</p>
+        <p class="mb-body">What you may need is a clearer architecture for making a consequential decision.</p>
+        <p class="mb-body">What could I do? is different from What should I do? Which is different from What do I want to do? Which is different again from What am I willing to do?</p>
+        <p class="mb-body">That’s where Decision Architecture™ comes in.</p>
+        <div class="mb-def-grid mb-grid-4">
+          <div class="mb-def-item"><span class="mb-def-k">CLARITY</span><span class="mb-def-v">What is true now? What matters? What are your 8s?</span></div>
+          <div class="mb-def-item"><span class="mb-def-k">DECISION</span><span class="mb-def-v">Facts vs. assumptions. Criteria. Tradeoffs. Reality.</span></div>
+          <div class="mb-def-item"><span class="mb-def-k">DIRECTION</span><span class="mb-def-v">What stays? What changes? Where are you headed—and why?</span></div>
+          <div class="mb-def-item"><span class="mb-def-k">ACTION</span><span class="mb-def-v">Meaningful moves that create evidence and momentum.</span></div>
+        </div>
+        <p class="mb-body">We don’t wait for perfect certainty. We create enough clarity to choose a direction, then use action to create new evidence. Because clarity without action eventually becomes another form of avoidance.</p>
+    </div>
+  </section>
+
+  <!-- CHAPTER FIVE: YOUR NEXT CHAPTER BLUEPRINT™ -->
+  <section class="mb-chapter mb-bg-cream" id="chapter-05">
+    <div class="mb-chapter-inner reveal">
+      <p class="mb-chapter-label">05 &middot; CHAPTER FIVE</p>
+      <h2 class="mb-h1">YOUR NEXT CHAPTER BLUEPRINT™</h2>
+        <p class="mb-body">This is where The Next Chapter™ becomes different from simply having eight interesting conversations.</p>
+        <p class="mb-pullquote">YOU DON’T LEAVE WITH NOTES. YOU LEAVE WITH YOUR NEXT CHAPTER BLUEPRINT™.</p>
+        <p class="mb-body">Across our work together, we construct a personalized decision document around your life, your decisions and your next chapter.</p>
+        <ul class="mb-list">
+          <li>Current Reality + 8s Baseline — where you are now and what an 8 looks like across the five areas of your life.</li>
+          <li>Rule of Five Priorities — the things that deserve disproportionate attention in the chapter ahead.</li>
+          <li>3–5 Year Next Chapter Thesis — a clear articulation of the life and direction you’re actually trying to build.</li>
+          <li>Decision Map — the viable paths available to you, not every possibility imaginable.</li>
+          <li>Decision Criteria + Explicit Tradeoffs — what must be true and what you are knowingly willing to give up.</li>
+          <li>Next Chapter Reality Test — the financial and practical realities the decision must survive.</li>
+          <li>Assumption Tests — real-world conversations, experiments and evidence before consequential commitments.</li>
+          <li>12-Month Architecture — how the next chapter begins becoming real.</li>
+          <li>Immediate 30-Day Sprint — the first moves. Not someday. Now.</li>
+        </ul>
+        <h3 class="mb-h2">EVERY SESSION ENDS WITH A +1</h3>
+        <p class="mb-body">I don’t want you waiting until Day 90 to start living differently.</p>
+        <div class="mb-def-grid mb-grid-4">
+          <div class="mb-def-item"><span class="mb-def-k">THE DECISION</span><span class="mb-def-v">What did we decide?</span></div>
+          <div class="mb-def-item"><span class="mb-def-k">THE +1</span><span class="mb-def-v">What meaningful action comes next?</span></div>
+          <div class="mb-def-item"><span class="mb-def-k">THE EVIDENCE</span><span class="mb-def-v">What are we trying to learn?</span></div>
+          <div class="mb-def-item"><span class="mb-def-k">BY WHEN</span><span class="mb-def-v">When will you do it?</span></div>
+        </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER SIX: THE NEXT CHAPTER™ -->
+  <section class="mb-chapter mb-bg-navy" id="chapter-06">
+    <div class="mb-chapter-inner reveal">
+      <p class="mb-chapter-label">06 &middot; CHAPTER SIX</p>
+      <h2 class="mb-h1">THE NEXT CHAPTER™</h2>
+        <p class="mb-body">The Next Chapter™ is a private Decision Architecture engagement for accomplished people navigating a meaningful decision, transition or question about what comes next.</p>
+        <p class="mb-body">It is not a course. It’s not group coaching. It’s not therapy. It’s not eight hours of me giving you advice. And it’s definitely not 63 prerecorded videos you need to watch before our next meeting.</p>
+        <p class="mb-body">We work together. Privately. On the actual decisions in front of you.</p>
+        <h3 class="mb-h2">HOW IT WORKS</h3>
+        <ul class="mb-list">
+          <li>8 private, 60-minute Decision Architecture sessions.</li>
+          <li>Your Decision Clarity Assessment, unpacked together—not simply handed back as a score.</li>
+          <li>Human 10.0™ + Decision Architecture™ tools selected for your specific situation, not a canned curriculum.</li>
+          <li>Real-world testing between sessions through conversations, +1 experiments, research and action.</li>
+          <li>Your personalized Next Chapter Blueprint™, built progressively throughout the engagement.</li>
+        </ul>
+        <h3 class="mb-h2">THE 90-DAY JOURNEY</h3>
+        <div class="mb-timeline">
+          <div class="mb-timeline-item">
+            <span class="mb-timeline-days">DAYS 1–30</span>
+            <span class="mb-timeline-name">CLARITY</span>
+            <span class="mb-timeline-desc">Define current reality, your 8s, priorities and your Next Chapter Thesis.</span>
+            <span class="mb-timeline-outcome">Outcome: a clear picture of the next 3–5 years you actually want.</span>
+          </div>
+          <div class="mb-timeline-item">
+            <span class="mb-timeline-days">DAYS 31–60</span>
+            <span class="mb-timeline-name">DECISION</span>
+            <span class="mb-timeline-desc">Identify viable options, establish criteria, confront tradeoffs and pressure-test reality.</span>
+            <span class="mb-timeline-outcome">Outcome: critical decisions made—with evidence behind them.</span>
+          </div>
+          <div class="mb-timeline-item">
+            <span class="mb-timeline-days">DAYS 61–90</span>
+            <span class="mb-timeline-name">MOVEMENT</span>
+            <span class="mb-timeline-desc">Test assumptions, remove friction, commit to direction and translate decisions into action.</span>
+            <span class="mb-timeline-outcome">Outcome: a practical 12-month architecture with the first moves underway.</span>
+          </div>
+        </div>
+        <h3 class="mb-h2">DON’T HAVE 90 DAYS?</h3>
+        <p class="mb-body">Sometimes the decision in front of you won’t wait. You may be considering an offer, negotiating an exit, facing a retirement decision, selling a business, responding to a significant opportunity or working against another real deadline.</p>
+        <p class="mb-body">Ninety days is the standard engagement window. It isn’t a requirement to drag a decision out for 90 days.</p>
+        <p class="mb-pullquote">The architecture doesn’t change. The cadence does.</p>
+        <p class="mb-body">When circumstances require it, we can compress the eight sessions into an accelerated schedule. The objective remains the same: get clear, make the critical decisions, pressure-test them against reality, and move.</p>
+        <h3 class="mb-h2">WHAT SUCCESS LOOKS LIKE</h3>
+        <ul class="mb-list">
+          <li>A clearer understanding of what matters now.</li>
+          <li>Defined 8s across the five areas of your life.</li>
+          <li>A clear 3–5 year Next Chapter Thesis.</li>
+          <li>Critical decisions and tradeoffs documented.</li>
+          <li>Important assumptions tested against reality.</li>
+          <li>A personalized Next Chapter Blueprint™.</li>
+          <li>A practical 12-month architecture.</li>
+          <li>An immediate 30-day sprint already underway.</li>
+        </ul>
+        <p class="mb-pullquote">I know what I’m choosing, why I’m choosing it, and what I’m doing next.</p>
+    </div>
+  </section>
+
+  <!-- CHAPTER SEVEN: THE DECISION IS YOURS -->
+  <section class="mb-chapter mb-bg-cream" id="chapter-07">
+    <div class="mb-chapter-inner reveal">
+      <p class="mb-chapter-label">07 &middot; CHAPTER SEVEN</p>
+      <h2 class="mb-h1">THE DECISION IS YOURS</h2>
+        <h3 class="mb-h2">“I DON’T KNOW WHAT I WANT.”</h3>
+        <p class="mb-body">Good. You don’t need to. If you already had complete clarity, you probably wouldn’t need this work. We don’t begin with “Tell me your perfect future.” We begin with “Tell me what’s true right now.” Then we work from there.</p>
+        <h3 class="mb-h2">“I’M NOT READY TO BLOW UP MY LIFE.”</h3>
+        <p class="mb-body">Good. I don’t want you to. The objective isn’t change. The objective is alignment. Sometimes the right decision is stay. Sometimes it’s not yet. Sometimes it is a significant change. The goal is making decisions that support the life you actually want.</p>
+        <h3 class="mb-h2">“I CAN PROBABLY FIGURE THIS OUT MYSELF.”</h3>
+        <p class="mb-body">You probably can. You’re successful for a reason. The question is whether doing all of this alone is the best use of your time and perspective. My job is to notice what you aren’t noticing, ask the question you haven’t asked, challenge the assumption you’ve stopped questioning, and put structure around something that feels tangled.</p>
+        <h3 class="mb-h2">“IS THIS COACHING?”</h3>
+        <p class="mb-body">There are elements that may feel like coaching, but “coach” doesn’t completely describe the role I play. I think of myself as a Decision Architect. An architect helps clarify what you’re trying to create, identify constraints, challenge choices that don’t fit the objective, and turn an idea into a structure. Your life. Your decision. Your chapter.</p>
+        <h3 class="mb-h2">WHO THIS IS FOR</h3>
+        <p class="mb-body">The Next Chapter™ is designed for accomplished people facing a real question about what comes next: executives, founders, entrepreneurs, senior leaders, veterans, professionals approaching retirement, people considering an exit, and people who achieved the goal and discovered they need another one.</p>
+        <p class="mb-body">You don’t need to be in crisis. But there should be a real question, decision, transition or tension—and a willingness to examine it seriously.</p>
+        <h3 class="mb-h2">WHO THIS IS NOT FOR</h3>
+        <p class="mb-body">This isn’t for someone looking for a guru. It isn’t therapy or clinical support. It isn’t résumé writing, job placement or financial planning. And it’s probably not for someone who enjoys talking about change but isn’t willing to make decisions.</p>
+        <p class="mb-pullquote">Insight matters. But eventually, something has to move.</p>
+        <h3 class="mb-h2">THE INVESTMENT</h3>
+        <p class="mb-body">You can spend another year thinking about what’s next. Sometimes time is exactly what’s required. But time also has a cost: attention, mental bandwidth, opportunities not explored, conversations postponed, and decisions sitting open in the background of your life.</p>
+        <p class="mb-pullquote">What would greater clarity allow you to do with the next year—or the next ten?</p>
+        <p class="mb-body">THE NEXT CHAPTER™</p>
+        <p class="mb-body">Private Decision Architecture™  •  8 Sessions  •  90-Day Standard Engagement</p>
+        <p class="mb-body">$7,500</p>
+        <p class="mb-body">or $2,500/month for three months</p>
+        <h3 class="mb-h2">ONE LAST THOUGHT</h3>
+        <p class="mb-body">You don’t need a crisis to reconsider what comes next. You don’t have to throw away everything you’ve built. You don’t need to have the answer before you begin. And you certainly don’t need to become someone else.</p>
+        <p class="mb-body">But there are some questions worth answering deliberately:</p>
+        <ul class="mb-list">
+          <li>What matters now?</li>
+          <li>What does an 8 look like in the five areas of my life?</li>
+          <li>What have I outgrown?</li>
+          <li>What am I holding onto because it still matters—and what am I holding onto simply because it took a long time to build?</li>
+          <li>What am I still trying to prove?</li>
+          <li>What would I choose if I didn’t need to prove it anymore?</li>
+          <li>How does the decision in front of me feed my 8s?</li>
+          <li>If I keep living exactly as I am now, will I be happy with where it takes me?</li>
+        </ul>
+        <p class="mb-pullquote">You don’t have to see the entire path. You need enough clarity to choose the next step.</p>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING: TWO PATHS ============ -->
+  <section class="mb-bg-navy" style="padding:0;">
+    <div class="mb-chapter-inner reveal" style="max-width:720px; margin:0 auto; padding:84px 40px 90px; text-align:center;">
+      <p class="mb-body" style="text-align:center; font-size:17px; color:#c3ccd3;">If you&rsquo;ve read this far and found yourself somewhere in these pages, that&rsquo;s probably worth paying attention to.</p>
+
+      <div id="mb-close-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:44px 0 0; text-align:left;">
+        <div class="mb-path-card mb-path-primary">
+          <p class="mb-path-label">I&rsquo;M READY.</p>
+          <p class="mb-path-copy">You have something meaningful to work through and you&rsquo;re ready to begin.</p>
+          <!-- PLACEHOLDER: replace href with the real payment/enrollment URL once it exists. -->
+          <a class="btn-gold mb-path-btn" href="connect.html?topic=Working%20together&amp;note=I%20just%20read%20The%20Next%20Chapter%20mini-book%20and%20I%27m%20ready%20to%20begin.#form" style="display:block; text-align:center; background:#d9a13f; color:#0a1420; font-family:'Oswald',sans-serif; font-size:14px; font-weight:700; letter-spacing:0.5px; padding:16px 20px; border-radius:3px; text-decoration:none;">BEGIN THE NEXT CHAPTER&trade; &rarr;</a>
+          <p class="mb-path-note">Enrollment link pending &mdash; this currently opens a message to Mike.</p>
+        </div>
+        <div class="mb-path-card">
+          <p class="mb-path-label">I HAVE A QUESTION.</p>
+          <p class="mb-path-copy">There&rsquo;s something specific you want to understand before deciding.</p>
+          <!-- PLACEHOLDER: replace href with Mike's real calendar link once it exists. -->
+          <a class="btn-ghost mb-path-btn" href="connect.html?topic=General%20question&amp;note=I%20just%20read%20The%20Next%20Chapter%20mini-book%20and%20I%20have%20a%20question%20before%20deciding.#form">TALK WITH MIKE &rarr;</a>
+          <p class="mb-path-note">A short conversation to see whether the work fits the question you&rsquo;re trying to solve.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:64px; padding-top:36px; border-top:1px solid #1c2733;">
+        <p style="font-family:'Oswald',sans-serif; font-size:15px; font-weight:700; letter-spacing:0.5px; color:#ffffff; margin:0 0 6px;">MICHAEL SCHINDLER</p>
+        <p style="font-size:12.5px; line-height:1.6; color:#8b95a0; margin:0 0 14px;">Decision Architect &middot; U.S. Navy Veteran &middot; 3&times; Author &middot; Co-Creator, VUCA MAX&trade; &middot; Creator, Human 10.0&trade;</p>
+        <p style="font-family:'Oswald',sans-serif; font-size:11px; font-weight:600; letter-spacing:1px; color:#d9a13f; margin:0;">Better decisions. Stronger humans. What&rsquo;s next?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" style="background:#0a1420; padding:34px 60px; border-top:1px solid #1c2733;">
+    <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; padding-bottom:20px; border-bottom:1px solid #1c2733;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="width:38px; height:38px; border-radius:6px; border:1.5px solid #d9a13f; display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:'Oswald',sans-serif; font-size:13px; font-weight:700; color:#d9a13f;">MS</span>
+        </div>
+        <div style="line-height:1.15;">
+          <div style="font-family:'Oswald',sans-serif; font-size:14px; font-weight:700; color:#f5f2ec;">MIKE SCHINDLER</div>
+          <div style="font-family:'Oswald',sans-serif; font-size:10px; font-weight:500; letter-spacing:1px; color:#d9a13f;">DECISION ARCHITECT</div>
+        </div>
+      </div>
+      <nav style="display:flex; gap:22px; flex-wrap:wrap;">
+        <a class="nav-link" href="about.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">ABOUT MIKE</a>
+        <a class="nav-link" href="programs.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">HUMAN 10.0</a>
+        <a class="nav-link" href="what-i-do.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">WHAT I DO</a>
+        <a class="nav-link" href="speaking.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">SPEAKING</a>
+        <a class="nav-link" href="resources.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">RESOURCES</a>
+        <a class="nav-link" href="connect.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">CONTACT</a>
+      </nav>
+      <div style="display:flex; gap:10px;">
+        <a href="#" style="width:30px; height:30px; border-radius:50%; background:#0d1926; display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#d9a13f"><path d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1.02 4.6 1.02 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zM1.5 8.5h3v14h-3v-14zm6.5 0h2.9v1.9h.04c.4-.8 1.4-1.9 3-1.9 3.2 0 3.8 2.1 3.8 4.8v7.2h-3v-6.4c0-1.5 0-3.5-2.1-3.5s-2.4 1.7-2.4 3.4v6.5h-3v-14z"/></svg></a>
+        <a href="#" style="width:30px; height:30px; border-radius:50%; background:#0d1926; display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#d9a13f"><path d="M22 8.4s-.2-1.6-.8-2.3c-.8-.9-1.7-.9-2.1-1C16.4 5 12 5 12 5s-4.4 0-7.1.1c-.4 0-1.3.1-2.1 1-.6.7-.8 2.3-.8 2.3S1.8 10.3 1.8 12.1v1.7c0 1.8.2 3.7.2 3.7s.2 1.6.8 2.3c.8.9 1.9.9 2.4 1 1.7.2 7.3.2 7.3.2s4.4 0 7.1-.1c.4 0 1.3-.1 2.1-1 .6-.7.8-2.3.8-2.3s.2-1.9.2-3.7v-1.7c0-1.8-.2-3.7-.2-3.7zM9.9 15.5V9.4l5.4 3-5.4 3.1z"/></svg></a>
+        <a href="#" style="width:30px; height:30px; border-radius:50%; background:#0d1926; display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d9a13f" stroke-width="1.6"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 7l10 7 10-7"/></svg></a>
+      </div>
+    </div>
+    <p style="text-align:center; font-size:12px; color:#6b7680; margin:18px 0 0;">&copy; 2026 Michael Schindler. All Rights Reserved.</p>
+  </footer>
+
+</div>
+<script src="js/script.js"></script>
+<script>
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in');}); }
+    else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { threshold: 0.1 });
+      els.forEach(function (e) { io.observe(e); });
+    }
+    // Results-bridge wiring point: when a real assessment/results engine
+    // exists, have it link here as mini-book.html?from=assessment and the
+    // approved "Your results are just the beginning" framing swaps in below.
+    // Nothing here fabricates a score or a completed assessment.
+    if (new URLSearchParams(location.search).get('from') === 'assessment') {
+      document.getElementById('mb-hero-default').style.display = 'none';
+      document.getElementById('mb-hero-fromassessment').style.display = 'block';
+    }
+  })();
+</script>
+</body>
+</html>

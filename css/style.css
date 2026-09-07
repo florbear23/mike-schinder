@@ -1,0 +1,1088 @@
+.nav-connect { display:none; }
+body { margin:0; background:#0a1420; }
+    * { box-sizing:border-box; }
+    a { color:#d9a13f; text-decoration:none; }
+    a:hover { color:#e6b562; }
+    .nav-link { color:#cfd6dc; }
+    .nav-link:hover { color:#ffffff; }
+    html { scroll-behavior:smooth; } section, footer { scroll-margin-top:76px; }
+    @media (max-width: 1150px) {
+      #audience-grid { grid-template-columns:repeat(2,1fr) !important; }
+    }
+    @media (max-width: 900px) {
+      #ways-grid { grid-template-columns:1fr !important; gap:32px !important; }
+      #hero-portrait-wrap { min-height:380px !important; }
+      #assessment > div { grid-template-columns:1fr !important; gap:36px !important; }
+      #programs > div { grid-template-columns:1fr !important; gap:36px !important; }
+    }
+    @media (max-width: 620px) {
+      #audience-grid { grid-template-columns:1fr !important; }
+      #stats-row { grid-template-columns:1fr !important; gap:16px !important; padding:20px 0 !important; }
+      #hero-cta-btn { display:block; text-align:center; }
+      #header-connect { display:none !important; }
+    }
+    @media (min-width: 760px) {
+      #footer-row { flex-wrap:nowrap !important; }
+      #footer-row nav { flex-wrap:nowrap !important; gap:14px !important; }
+      #footer-row nav a { white-space:nowrap; font-size:11px !important; }
+    }
+    #clarity-steps > div:not(.step-arrow) { width:auto !important; flex:1 1 0; min-width:120px; max-width:190px; }
+    @media (max-width: 1020px) {
+      #clarity-steps .step-arrow { display:none !important; }
+      #clarity-steps { gap:24px !important; }
+    }
+    @media (min-width: 901px) and (max-width: 1150px) {
+      #main-nav { gap:18px !important; }
+      #main-nav a { font-size:12px !important; white-space:nowrap; }
+      #header-inner { padding:20px 30px !important; }
+    }
+    @media (max-width: 900px) {
+      #main-nav { display:none !important; }
+      #main-nav.open { display:flex !important; position:fixed; top:70px; bottom:0; left:0; right:0; height:auto; background:#0a1420; flex-direction:column; gap:0 !important; padding:10px 16px 24px; z-index:20; overflow-y:auto; }
+      body:has(#main-nav.open) { overflow:hidden; }
+      #main-nav.open a { padding:18px 0; font-size:15px !important; border-bottom:1px solid #1c2733 !important; }
+      #main-nav.open .nav-connect { display:block; background:#d9a13f; color:#0a1420 !important; font-family:'Oswald',sans-serif; font-weight:700; text-align:center; padding:16px 0 !important; margin-top:auto; border-radius:3px; border-bottom:none !important; margin-top:14px; letter-spacing:0.5px; }
+      .nav-connect { display:none; }
+      #menu-toggle { display:block !important; }
+      #header-inner { padding:16px 10px !important; } header { position:sticky; }
+      section, footer { padding-left:10px !important; padding-right:10px !important; }
+      section > div { padding-left:0 !important; padding-right:0 !important; }
+      footer > div { justify-content:center !important; text-align:center; }
+      footer nav { justify-content:center !important; }
+
+      #main-nav.open { padding-left:10px !important; padding-right:10px !important; }
+      section > div, header + section > div { grid-template-columns:1fr !important; }
+      h1 { font-size:42px !important; }
+      #stats-row { grid-template-columns:repeat(3,1fr) !important; gap:18px 24px !important; }
+    }
+
+/* ============================================================
+   HOMEPAGE — REVISED BUYER JOURNEY (2026 revision)
+   Recognition -> Assessment -> Framework -> Proof -> Offers ->
+   Blueprint -> Guarantee -> CTA
+   Uses the existing design tokens only:
+   navy #0a1420 · panel #0d1926 · rule #1c2733 · gold #d9a13f
+   cream #f3efe9 · ink #16232f · body #5c6773 / #aab3ba
+   ============================================================ */
+
+.btn-gold { transition:background .2s ease; }
+.btn-gold:hover { background:#e6b562 !important; color:#0a1420 !important; }
+
+.btn-ghost {
+  display:inline-block; font-family:'Oswald',sans-serif; font-size:14px; font-weight:700;
+  letter-spacing:0.5px; color:#e8ecef; padding:17px 32px; border:1px solid #2a3846;
+  border-radius:3px; transition:border-color .2s ease, color .2s ease, background .2s ease;
+}
+.btn-ghost:hover { border-color:#d9a13f; color:#ffffff; background:#0d1926; }
+
+/* ---- 3 · BUYER RECOGNITION ---- */
+#recognition-list { border-top:1px solid #ddd5c8; }
+.rec-row {
+  display:grid; grid-template-columns:72px 1fr 34px; align-items:start; gap:10px;
+  padding:26px 18px 26px 6px; border-bottom:1px solid #ddd5c8;
+  color:#16232f; text-decoration:none;
+  transition:background .25s ease, padding-left .25s ease;
+}
+.rec-row:hover { background:#ece6dc; padding-left:20px; color:#16232f; }
+.rec-num {
+  font-family:'Anton',sans-serif; font-size:34px; line-height:1; color:#c9bda6;
+  letter-spacing:1px; transition:color .25s ease;
+}
+.rec-row:hover .rec-num { color:#d9a13f; }
+.rec-body { display:block; max-width:660px; }
+.rec-label {
+  display:block; font-family:'Oswald',sans-serif; font-size:11px; font-weight:700;
+  letter-spacing:1.6px; color:#8a6a28; margin-bottom:8px;
+}
+/* the recognition line — sized to be read first */
+.rec-text {
+  display:block; font-size:20px; line-height:1.4; font-weight:600; color:#16232f;
+}
+/* the supporting line — present, but clearly secondary */
+.rec-sub {
+  display:block; font-size:15px; line-height:1.6; color:#5c6773; margin-top:6px;
+}
+.rec-arrow {
+  font-family:'Oswald',sans-serif; font-size:18px; color:#d9a13f; text-align:right;
+  opacity:0; transform:translateX(-8px); transition:opacity .25s ease, transform .25s ease;
+}
+.rec-row:hover .rec-arrow { opacity:1; transform:translateX(0); }
+
+/* ---- 4 · ASSESSMENT SEQUENCE CHIPS ---- */
+#sequence-chips { display:flex; align-items:center; flex-wrap:wrap; gap:9px; margin:0 0 30px; }
+.seq-chip {
+  font-family:'Oswald',sans-serif; font-size:11.5px; font-weight:700; letter-spacing:1px;
+  color:#e8ecef; border:1px solid #22303e; background:#0d1926; padding:9px 14px; border-radius:3px;
+}
+.seq-arrow { color:#4d5a67; font-size:12px; }
+
+/* ---- 5 · FRAMEWORK ---- */
+#framework-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid #ddd5c8; }
+.fw-cell {
+  padding:26px 26px 26px 0; border-right:1px solid #ddd5c8;
+}
+.fw-cell:last-child { border-right:none; }
+.fw-cell:not(:first-child) { padding-left:26px; }
+.fw-step {
+  display:block; font-family:'Oswald',sans-serif; font-size:11px; font-weight:700;
+  letter-spacing:1.5px; color:#d9a13f; margin-bottom:12px;
+}
+.fw-title {
+  font-family:'Oswald',sans-serif; font-size:14.5px; font-weight:700; letter-spacing:0.4px;
+  color:#16232f; margin:0 0 8px;
+}
+.fw-copy { font-size:13.5px; line-height:1.65; color:#5c6773; margin:0; }
+
+/* ---- 6 · TRANSFORMATION PROOF (DAN MULLINS) ---- */
+/* Source video is 124x224 portrait (Dan recorded it on a phone). Rather than
+   drop a narrow player into a wide row and leave a void, the panel is sized BY
+   the video: it bleeds to the panel's top, bottom and left edges, so its tall
+   format is what sets the section's height. The portrait shape becomes the
+   design device instead of an awkwardness to work around.
+   Capped at 258px wide — ~2.1x its native 124px, never stretched. */
+#proof-grid {
+  max-width:900px; margin:0 auto;
+  display:grid; grid-template-columns:258px 1fr; align-items:center;
+  background:#0d1926; border:1px solid #1c2733; border-radius:12px;
+  overflow:hidden; box-shadow:0 26px 60px rgba(0,0,0,0.38);
+}
+#dan-stage { margin:0; align-self:stretch; display:flex; }
+#dan-frame {
+  position:relative; width:100%; aspect-ratio:124/224;
+  overflow:hidden; background:#0a1420;
+  border-right:1px solid #1c2733;
+}
+#dan-video { display:block; width:100%; height:100%; object-fit:cover; background:#0a1420; }
+#dan-copy { padding:44px 52px; }
+/* custom cover sits over the poster until play; then it gets out of the way */
+#dan-play {
+  position:absolute; inset:0; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:14px;
+  border:0; cursor:pointer; padding:0;
+  background:linear-gradient(180deg, rgba(10,20,32,0.32) 0%, rgba(10,20,32,0.78) 100%);
+  transition:opacity .25s ease;
+}
+#dan-frame.is-playing #dan-play { opacity:0; pointer-events:none; }
+.play-btn {
+  width:64px; height:64px; border-radius:50%; border:2px solid #d9a13f;
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(10,20,32,0.55); padding-left:4px;
+  transition:background .25s ease, transform .25s ease;
+}
+#dan-play:hover .play-btn { background:rgba(217,161,63,0.16); transform:scale(1.06); }
+.dan-video-label {
+  font-family:'Oswald',sans-serif; font-size:10.5px; font-weight:600;
+  letter-spacing:1.5px; color:#c3ccd3;
+}
+
+/* the transformation arc — built only from the two supplied facts */
+#dan-arc { list-style:none; margin:0 0 30px; padding:0; }
+#dan-arc li {
+  position:relative; padding:0 0 18px 26px; border-left:1px solid #22303e;
+}
+#dan-arc li:last-child { padding-bottom:0; border-left-color:transparent; }
+#dan-arc li::before {
+  content:''; position:absolute; left:-5px; top:5px; width:9px; height:9px;
+  border-radius:50%; background:#0a1420; border:2px solid #3a4a5a;
+}
+#dan-arc li:last-child::before { border-color:#d9a13f; background:#d9a13f; }
+.arc-k {
+  display:block; font-family:'Oswald',sans-serif; font-size:10.5px; font-weight:700;
+  letter-spacing:1.6px; color:#8b95a0; margin-bottom:5px;
+}
+.arc-v { display:block; font-size:17px; line-height:1.4; font-weight:500; color:#ffffff; }
+.arc-v-muted { color:#8b95a0; font-weight:400; font-size:15px; font-style:italic; }
+
+#dan-name {
+  font-family:'Oswald',sans-serif; font-size:19px; font-weight:700;
+  letter-spacing:0.5px; color:#ffffff; margin:0 0 6px;
+}
+#dan-title { font-size:13.5px; line-height:1.6; color:#aab3ba; margin:0; }
+
+/* ---- 7 · TWO WAYS FORWARD ---- */
+/* The two paths must not read as equal pricing cards. Human 10.0 is the entry
+   point: flatter, quieter, narrower. The Next Chapter is the destination:
+   wider, darker, gold-edged, lifted off the page. */
+#offers-grid { display:grid; grid-template-columns:0.66fr 1.34fr; gap:24px; align-items:stretch; }
+.offer-card { border-radius:10px; display:flex; flex-direction:column; }
+.offer-kicker {
+  font-family:'Oswald',sans-serif; font-size:11px; font-weight:600;
+  letter-spacing:1.5px; margin:0;
+}
+.offer-kicker-light { color:#9c9484; margin-bottom:16px; }
+
+/* entry point — deliberately understated */
+.offer-secondary {
+  background:#faf8f5; border:1px solid #e2dad0; padding:30px 28px 28px;
+  box-shadow:none; align-self:start;
+}
+/* premium private engagement — the page's visual anchor */
+.offer-primary {
+  position:relative; background:#0a1420;
+  border:1px solid #2b3a49; border-top:3px solid #d9a13f;
+  padding:44px 46px 46px;
+  box-shadow:0 26px 60px rgba(0,0,0,0.42);
+}
+.offer-primary-top {
+  display:flex; align-items:center; justify-content:space-between;
+  gap:16px; flex-wrap:wrap; margin-bottom:18px;
+}
+.offer-badge {
+  font-family:'Oswald',sans-serif; font-size:10px; font-weight:700; letter-spacing:1.2px;
+  color:#0a1420; background:#d9a13f; padding:6px 12px; border-radius:2px;
+}
+#next-chapter-title {
+  font-family:'Anton',sans-serif; font-size:52px; line-height:1.02; font-weight:400;
+  color:#ffffff; margin:0 0 10px; letter-spacing:0.5px;
+}
+/* Human 10.0's title sits well below the primary offer's in the hierarchy */
+.offer-secondary h3 { font-size:22px !important; }
+.offer-list { list-style:none; margin:0 0 4px; padding:0; }
+.offer-list li {
+  position:relative; padding-left:18px; font-size:13.5px; line-height:1.6;
+  color:#5c6773; margin-bottom:9px;
+}
+.offer-list li::before {
+  content:''; position:absolute; left:0; top:9px; width:7px; height:1.5px; background:#d9a13f;
+}
+.offer-list-dark li { color:#aab3ba; font-size:14px; margin-bottom:10px; }
+.offer-method { border-top:1px solid #1c2733; padding-top:18px; margin:24px 0 26px; }
+.offer-method p { font-size:12.5px; line-height:1.6; color:#8b95a0; margin:0; }
+.offer-method strong { color:#d9a13f; font-weight:600; }
+
+.offer-link-dark, .offer-link-gold {
+  font-family:'Oswald',sans-serif; font-size:12.5px; font-weight:700; letter-spacing:0.8px;
+  margin-top:auto; padding-top:18px; display:inline-block;
+}
+.offer-link-dark { color:#16232f; border-bottom:1px solid #d9a13f; align-self:flex-start; }
+.offer-link-dark:hover { color:#8a6a28; }
+.offer-link-gold { color:#d9a13f; border-bottom:1px solid #3a4a5a; padding-top:0; }
+.offer-link-gold:hover { color:#e6b562; border-bottom-color:#d9a13f; }
+
+/* ---- 8 · NEXT CHAPTER BLUEPRINT ---- */
+/* Real branded rendering (Sep 2026). .bp-stack/.bp-sheet/.bp-doc below are the
+   retired CSS-drawn mockup — left in place, unused, in case a future revision
+   needs the fallback illustration again. */
+.bp-real-image {
+  width:100%; height:auto; display:block; border-radius:10px;
+  box-shadow:0 26px 60px rgba(0,0,0,0.4);
+}
+.bp-stack { position:relative; padding:0 18px 18px 0; }
+.bp-sheet {
+  position:absolute; border-radius:8px; left:0; right:0; top:0; bottom:0;
+}
+.bp-sheet-2 { transform:translate(9px, 9px); background:#cdc4b6; }
+.bp-sheet-3 { transform:translate(18px, 18px); background:#8e8779; }
+.bp-doc {
+  position:relative; background:#f3efe9; border-radius:8px; overflow:hidden;
+  border:1px solid #cfc4b2; box-shadow:0 22px 50px rgba(0,0,0,0.38);
+}
+.bp-doc-head {
+  background:#16232f; padding:22px 26px; border-bottom:3px solid #d9a13f;
+}
+.bp-doc-eyebrow {
+  display:block; font-family:'Oswald',sans-serif; font-size:10px; font-weight:600;
+  letter-spacing:1.8px; color:#d9a13f; margin-bottom:8px;
+}
+.bp-doc-title {
+  display:block; font-family:'Anton',sans-serif; font-size:22px; line-height:1.15;
+  font-weight:400; letter-spacing:0.5px; color:#ffffff;
+}
+.bp-doc-body { padding:8px 26px 22px; }
+.bp-line {
+  display:grid; grid-template-columns:30px 1fr; align-items:baseline; gap:4px;
+  padding:15px 0 15px; border-bottom:1px dashed #d5cabb;
+}
+.bp-line:last-child { border-bottom:none; }
+.bp-line-num {
+  font-family:'Oswald',sans-serif; font-size:11px; font-weight:700;
+  letter-spacing:1px; color:#b09154;
+}
+.bp-line-label {
+  font-family:'Oswald',sans-serif; font-size:12.5px; font-weight:700;
+  letter-spacing:0.9px; color:#16232f;
+}
+.bp-line-label::after {
+  content:''; display:block; height:5px; border-radius:3px; background:#ddd3c4;
+  margin-top:9px; width:82%;
+}
+.bp-line:nth-child(2) .bp-line-label::after { width:66%; }
+.bp-line:nth-child(4) .bp-line-label::after { width:74%; }
+.bp-line:nth-child(6) .bp-line-label::after { width:58%; }
+
+/* ---- 9 · GUARANTEE ---- */
+#guarantee-panel {
+  display:grid; grid-template-columns:64px 1fr; gap:26px; align-items:start;
+  background:#ffffff; border:1px solid #e2dad0; border-left:4px solid #d9a13f;
+  border-radius:8px; padding:40px 44px; box-shadow:0 2px 14px rgba(0,0,0,0.05);
+}
+#guarantee-mark {
+  width:64px; height:64px; border-radius:50%; border:1.5px solid #e2d3b6;
+  background:#faf7f2; display:flex; align-items:center; justify-content:center;
+}
+#guarantee-text {
+  font-size:22px; line-height:1.6; font-weight:400; color:#16232f; margin:0; max-width:820px;
+}
+#guarantee-text strong { font-weight:600; color:#0a1420; }
+
+/* ---- 10 · FINAL CTA ---- */
+#final-cta-row { display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; }
+
+/* ---- RESPONSIVE — REVISED HOMEPAGE ---- */
+@media (max-width: 1150px) {
+  #recognition-wrap { grid-template-columns:0.9fr 1.1fr !important; gap:48px !important; }
+  #offers-grid { grid-template-columns:0.72fr 1.28fr; gap:20px; }
+  #next-chapter-title { font-size:40px; }
+  .rec-text { font-size:18.5px; }
+  #framework-grid { grid-template-columns:repeat(2,1fr); }
+  .fw-cell:nth-child(2) { border-right:none; }
+  .fw-cell:nth-child(1), .fw-cell:nth-child(2) { border-bottom:1px solid #ddd5c8; }
+  .fw-cell:nth-child(3) { padding-left:0; }
+}
+
+@media (max-width: 980px) {
+  #offers-grid { grid-template-columns:1fr; gap:22px; }
+  .offer-primary { order:-1; }
+  #next-chapter-title { font-size:40px; }
+}
+
+@media (max-width: 900px) {
+  #recognition-wrap { grid-template-columns:1fr !important; gap:36px !important; }
+  #recognition-intro p { max-width:none !important; }
+  #proof-grid { gap:34px !important; }
+  #blueprint-grid { gap:44px !important; }
+  #blueprint-visual { max-width:460px; }
+  #framework-head { grid-template-columns:1fr !important; gap:26px !important; align-items:start !important; }
+  #guarantee-panel { padding:32px 28px; }
+  #guarantee-text { font-size:19px; }
+  .offer-primary { padding:32px 28px 34px; }
+  .offer-secondary { padding:28px 26px; }
+}
+
+@media (max-width: 620px) {
+  #hero-qualifier { font-size:19px !important; }
+  #recognition-intro h2 { font-size:36px !important; }
+  .rec-row { grid-template-columns:52px 1fr; padding:22px 0; }
+  .rec-num { font-size:26px; }
+  .rec-label { font-size:10px; letter-spacing:1.4px; margin-bottom:6px; }
+  .rec-text { font-size:17px; }
+  .rec-sub { font-size:14px; }
+  .rec-arrow { display:none; }
+  .rec-row:hover { padding-left:0; }
+  #framework-grid { grid-template-columns:1fr; }
+  .fw-cell { border-right:none !important; border-bottom:1px solid #ddd5c8; padding:22px 0 !important; }
+  .fw-cell:last-child { border-bottom:none; }
+  #next-chapter-title { font-size:32px; }
+  .offer-primary-top { gap:10px; }
+  #guarantee-panel { grid-template-columns:1fr; gap:18px; padding:28px 22px; }
+  #guarantee-text { font-size:17.5px; }
+  #guarantee-mark { width:52px; height:52px; }
+  #blueprint-visual { max-width:none; }
+  .bp-stack { padding:0 12px 12px 0; }
+  .bp-sheet { right:14px; }
+  .bp-sheet-2 { transform:translate(6px, 6px); }
+  .bp-sheet-3 { transform:translate(12px, 12px); }
+  /* the shared 900px block forces 3 columns; 2 gives the longer labels room */
+  #stats-row { grid-template-columns:repeat(2,1fr) !important; gap:16px 20px !important; }
+  .bp-doc-head { padding:18px 20px; }
+  .bp-doc-title { font-size:19px; }
+  .bp-doc-body { padding:6px 20px 18px; }
+  .bp-line-label { font-size:11.5px; }
+  #start h2 { font-size:30px !important; }
+  #final-cta-row { flex-direction:column; align-items:stretch; }
+  #final-cta-row a { display:block !important; text-align:center; }
+  #proof h2, #assessment h2, #blueprint h2, #programs h2 { font-size:28px !important; }
+  #sequence-chips { gap:7px; }
+  .seq-chip { font-size:10.5px; padding:8px 11px; }
+}
+
+/* ============================================================
+   HERO — CLIENT PHOTO (background removed)
+   assets/mike-hero.png is a true-alpha cutout of the client's own
+   photo (source: IMG_0080.jpeg, 480x640). It sits directly on the
+   navy, anchored to the section's bottom edge.
+
+   The source is a downscaled phone export, so every size below is
+   capped at or under its native 480px width — the photo is never
+   upscaled anywhere on the site.
+
+   WHEN THE FULL-RESOLUTION ORIGINAL ARRIVES:
+     1. re-run background removal on it,
+     2. save it over assets/mike-hero.png (and mike-portrait.png),
+     3. raise the three max-width values below (460 / 390 / 290).
+   Nothing else needs to change — the composition is proportional.
+   ============================================================ */
+#hero-glow {
+  position:absolute; right:0; bottom:0; width:min(880px, 72%); height:100%;
+  pointer-events:none;
+  background:radial-gradient(58% 60% at 60% 62%, #142231 0%, rgba(20,34,49,0.55) 42%, rgba(10,20,32,0) 72%);
+}
+#hero-portrait-wrap {
+  position:relative; align-self:end; display:flex; justify-content:center;
+}
+#hero-cutout {
+  display:block; width:100%; max-width:460px; height:auto;
+  /* The source photo is framed tight, so his shoulders are cut by the original
+     frame edge. Feathering the outer ~8% dissolves those two hard vertical
+     lines into the navy — without it the cutout reads as a pasted rectangle. */
+  -webkit-mask-image:linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+          mask-image:linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+
+/* The legacy 900px rule collapses every `section > div` to one column. The hero
+   holds its side-by-side composition down to 620px, then stacks. Both overrides
+   are bounded so neither leaks into the other's range. */
+@media (min-width: 621px) and (max-width: 1150px) {
+  #hero-inner { grid-template-columns:1.08fr 0.92fr !important; gap:16px !important; }
+  #hero-cutout { max-width:390px; }
+}
+@media (max-width: 900px) {
+  /* the legacy rule sets a min-height for the old cover-cropped photo;
+     the cutout is natural-height, so clear it */
+  #hero-portrait-wrap { min-height:0 !important; justify-content:center; }
+  #hero-inner { padding-bottom:0 !important; }
+  #hero-copy { padding-bottom:34px !important; }
+}
+@media (max-width: 620px) {
+  /* stacked: copy first, figure centred and grounded on the credibility bar */
+  #hero-inner { gap:0 !important; padding-top:24px !important; }
+  #hero-copy { padding:0 0 30px !important; }
+  #hero-cutout { max-width:290px; }
+  #hero-glow {
+    width:100%; height:64%;
+    background:radial-gradient(64% 54% at 50% 80%, #142231 0%, rgba(20,34,49,0.5) 46%, rgba(10,20,32,0) 75%);
+  }
+}
+
+/* ============================================================
+   SITE-WIDE IMAGE SYSTEM
+   One treatment for every photograph on the site, so pages read as
+   one design rather than a template with photos dropped in.
+   Applied by attribute selector — no page markup has to change.
+
+   Canonical values (also normalised inline across all pages):
+     portrait shadow  0 22px 54px rgba(0,0,0,0.44)
+     bottom scrim     rgba(10,20,32,0.55) -> transparent @38%
+     ambient blur     blur(36px) brightness(0.4) saturate(1.05) scale(1.18)
+     band blur        blur(8px)  brightness(0.27)               scale(1.08)
+     radius           8px
+   ============================================================ */
+
+/* Mike's real photo — never graded. The client's likeness stays as shot. */
+img[src*="mike-portrait"], img[src*="mike-hero"] { border-radius:8px; }
+#hero-cutout { border-radius:0; }
+
+/* Library/stock photography — pulled toward the portrait's cooler, calmer
+   register so it sits in the same world. Deliberately light-handed. */
+img[src*="detail-"], img[src*="card-"] {
+  border-radius:8px;
+  filter:saturate(0.82) contrast(1.04) brightness(0.95);
+}
+
+/* ---- 6b · PROOF SECTION RESPONSIVE ---- */
+@media (max-width: 900px) {
+  /* stacked: the video keeps its portrait format, centred, and the panel
+     padding returns around it so it never spans the full viewport width */
+  #proof-grid { grid-template-columns:1fr !important; max-width:520px; }
+  #dan-stage { justify-content:center; padding:34px 24px 0; }
+  #dan-frame {
+    width:232px; border-right:0; border:1px solid #1c2733; border-radius:12px;
+  }
+  #dan-copy { padding:30px 34px 36px; text-align:left; }
+}
+@media (max-width: 620px) {
+  #proof-grid { max-width:none; }
+  #dan-stage { padding:26px 20px 0; }
+  #dan-frame { width:206px; }
+  #dan-copy { padding:26px 22px 30px; }
+  #dan-arc li { padding-left:22px; }
+  .arc-v { font-size:16px; }
+}
+
+/* ============================================================
+   SHARED COMPONENTS — 2026 client feedback pass
+   Existing tokens only: navy #0a1420 · panel #0d1926 · rule #1c2733
+   gold #d9a13f · cream #f3efe9 · ink #16232f · body #5c6773 / #aab3ba
+   ============================================================ */
+
+/* ---- ASSET SLOT ----------------------------------------------
+   Used wherever the client has said an asset is coming but it is
+   not in the project yet. Deliberately looks like a considered part
+   of the design (not a broken image), and every one carries the
+   swap instructions inline in the HTML next to it. ------------- */
+.asset-slot {
+  position:relative; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:12px; text-align:center;
+  background:#0d1926; border:1px dashed #2a3846; border-radius:10px;
+  padding:34px 28px; color:#8b95a0;
+}
+.asset-slot.on-cream { background:#efe9e0; border-color:#cfc4b2; color:#7d7466; }
+.asset-slot-icon {
+  width:48px; height:48px; border-radius:50%; border:1.5px solid #d9a13f;
+  display:flex; align-items:center; justify-content:center; flex:0 0 auto;
+}
+.asset-slot-title {
+  font-family:'Oswald',sans-serif; font-size:12px; font-weight:700;
+  letter-spacing:1.5px; color:#d9a13f;
+}
+.asset-slot.on-cream .asset-slot-title { color:#8a6a28; }
+.asset-slot-note { font-size:12.5px; line-height:1.6; max-width:340px; margin:0; }
+.asset-slot-video { aspect-ratio:16/9; }
+.asset-slot-portrait { aspect-ratio:124/224; }
+
+/* ---- BEFORE -> AFTER ---------------------------------------- */
+.ba-list { list-style:none; margin:0; padding:0; }
+.ba-list li {
+  display:grid; grid-template-columns:1fr 34px 1fr; align-items:center; gap:14px;
+  padding:18px 0; border-bottom:1px solid #ddd5c8;
+}
+.ba-list li:last-child { border-bottom:none; }
+.ba-from { font-size:15.5px; line-height:1.5; color:#8a8579; text-decoration:line-through; text-decoration-color:#c9bda6; }
+.ba-arrow { font-family:'Oswald',sans-serif; font-size:16px; color:#d9a13f; text-align:center; }
+.ba-to { font-size:17px; line-height:1.45; font-weight:600; color:#16232f; }
+.ba-list.on-dark li { border-bottom-color:#1c2733; }
+.ba-list.on-dark .ba-from { color:#6b7680; text-decoration-color:#3a4a5a; }
+.ba-list.on-dark .ba-to { color:#ffffff; }
+
+/* ---- PATH / OFFER CARDS (Programs, What I Do) --------------- */
+.path-grid { display:grid; gap:24px; align-items:stretch; }
+.path-card {
+  display:flex; flex-direction:column; border-radius:10px;
+  background:#ffffff; border:1px solid #e2dad0; padding:30px 28px 28px;
+}
+.path-kicker {
+  font-family:'Oswald',sans-serif; font-size:11px; font-weight:600;
+  letter-spacing:1.5px; color:#9c9484; margin:0 0 14px;
+}
+.path-title {
+  font-family:'Anton',sans-serif; font-size:24px; font-weight:400;
+  color:#16232f; margin:0 0 8px; letter-spacing:0.4px;
+}
+.path-tag {
+  font-family:'Oswald',sans-serif; font-size:13px; font-weight:600;
+  letter-spacing:0.6px; color:#8a6a28; margin:0 0 14px;
+}
+.path-copy { font-size:14px; line-height:1.7; color:#5c6773; margin:0 0 18px; }
+.path-best {
+  border-top:1px solid #e6ded2; padding-top:14px; margin-top:auto; margin-bottom:18px;
+}
+.path-best-k {
+  display:block; font-family:'Oswald',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:1.5px; color:#9c9484; margin-bottom:6px;
+}
+.path-best-v { font-size:14px; line-height:1.55; color:#16232f; font-style:italic; }
+.path-cta {
+  font-family:'Oswald',sans-serif; font-size:12.5px; font-weight:700;
+  letter-spacing:0.8px; color:#16232f; border-bottom:1px solid #d9a13f;
+  align-self:flex-start;
+}
+.path-cta:hover { color:#8a6a28; }
+/* the private engagement, wherever it appears alongside the others */
+.path-card.is-primary {
+  background:#0a1420; border:1px solid #2b3a49; border-top:3px solid #d9a13f;
+  box-shadow:0 26px 60px rgba(0,0,0,0.34);
+}
+.is-primary .path-kicker { color:#d9a13f; }
+.is-primary .path-title { color:#ffffff; }
+.is-primary .path-tag { color:#d9a13f; }
+.is-primary .path-copy { color:#c3ccd3; }
+.is-primary .path-best { border-top-color:#1c2733; }
+.is-primary .path-best-k { color:#8b95a0; }
+.is-primary .path-best-v { color:#e8ecef; }
+.path-badge {
+  display:inline-block; font-family:'Oswald',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:1.2px; color:#0a1420; background:#d9a13f;
+  padding:5px 11px; border-radius:2px; margin-bottom:14px;
+}
+
+/* About: How Mike Works is a 3-up, not the old 4-step methodology grid */
+@media (max-width:900px){ #process-grid { grid-template-columns:1fr !important; gap:30px !important; } }
+@media (min-width:901px){ #process-grid { grid-template-columns:repeat(3,1fr) !important; } }
+
+/* ---- WHAT I DO · TWO WAYS FORWARD ---- */
+.wid-two-ways { display:flex; flex-direction:column; gap:14px; }
+.wid-way {
+  display:grid; grid-template-columns:80px 1fr auto; align-items:center; gap:26px;
+  padding:28px 26px; text-decoration:none;
+  background:#0d1926; border:1px solid #1c2733; border-radius:10px;
+  transition:border-color .25s ease, background .25s ease;
+}
+.wid-way:hover { border-color:#2a3846; background:#101e2c; }
+.wid-way-num {
+  font-family:'Anton',sans-serif; font-size:40px; color:#1c2733;
+  -webkit-text-stroke:1px #d9a13f; letter-spacing:1px;
+}
+.wid-way-kicker {
+  display:block; font-family:'Oswald',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:1.6px; color:#8b95a0; margin-bottom:7px;
+}
+.wid-way-title {
+  display:block; font-family:'Oswald',sans-serif; font-size:18px; font-weight:700;
+  color:#ffffff; letter-spacing:0.4px; margin-bottom:7px;
+}
+.wid-way-copy { display:block; font-size:13.5px; line-height:1.65; color:#9aa4ad; max-width:560px; }
+.wid-way-cta {
+  font-family:'Oswald',sans-serif; font-size:12px; font-weight:700;
+  letter-spacing:0.5px; color:#d9a13f; white-space:nowrap;
+}
+/* the private engagement carries more weight than the group path */
+.wid-way.is-primary {
+  background:#0a1420; border-color:#2b3a49; border-top:3px solid #d9a13f;
+  padding:34px 30px; box-shadow:0 20px 46px rgba(0,0,0,0.3);
+}
+.wid-way.is-primary .wid-way-kicker { color:#d9a13f; }
+.wid-way.is-primary .wid-way-title { font-size:26px; font-family:'Anton',sans-serif; font-weight:400; letter-spacing:0.5px; }
+.wid-way.is-primary .wid-way-copy { color:#c3ccd3; font-size:14.5px; }
+@media (max-width:700px){
+  .wid-way { grid-template-columns:56px 1fr; gap:16px; padding:22px 18px; }
+  .wid-way-num { font-size:30px; }
+  .wid-way-cta { grid-column:2; margin-top:12px; }
+  .wid-way.is-primary { padding:26px 20px; }
+  .wid-way.is-primary .wid-way-title { font-size:22px; }
+}
+
+/* ---- WHAT I DO · TIMOTHY ARC (placeholder until the video lands) ---- */
+#tim-arc { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+#tim-arc > div { padding:18px 20px; background:#0d1926; border:1px solid #1c2733; border-radius:8px; }
+@media (max-width:900px){ #tim-arc { grid-template-columns:1fr; gap:12px; } }
+
+/* ---- PROGRAMS · three paths + Next Chapter centrepiece ---- */
+#paths-grid { grid-template-columns:repeat(3,1fr); align-items:stretch; }
+@media (max-width:980px){ #paths-grid { grid-template-columns:1fr; } #paths-grid .is-primary { order:-1; } }
+
+.nc-panel {
+  background:#0d1926; border:1px solid #2b3a49; border-top:3px solid #d9a13f;
+  border-radius:12px; padding:48px 52px;
+  box-shadow:0 28px 64px rgba(0,0,0,0.42); text-align:center;
+}
+#nc-title {
+  font-family:'Anton',sans-serif; font-size:54px; line-height:1.02; font-weight:400;
+  color:#ffffff; margin:14px 0 10px; letter-spacing:0.5px;
+}
+#nc-sub {
+  font-family:'Oswald',sans-serif; font-size:17px; font-weight:600; letter-spacing:1.2px;
+  color:#d9a13f; margin:0 0 22px;
+}
+#nc-copy { font-size:16px; line-height:1.75; color:#c3ccd3; margin:0 auto 24px; max-width:640px; }
+#nc-method { border-top:1px solid #1c2733; padding-top:20px; margin:0 auto 28px; max-width:640px; }
+#nc-method p { font-size:12.5px; line-height:1.6; color:#8b95a0; margin:0; }
+#nc-method strong { color:#d9a13f; font-weight:600; }
+@media (max-width:620px){
+  .nc-panel { padding:34px 24px; }
+  #nc-title { font-size:34px; }
+  #nc-sub { font-size:15px; }
+  #nc-copy { font-size:15px; }
+}
+/* Programs reuses the homepage proof panel; keep it centred here too */
+#proof #proof-grid { max-width:900px; }
+
+/* ---- SPEAKERS · topics, audiences, logos, planner ---- */
+.spk-topic { border-top:1px solid #ddd5c8; padding:30px 0; }
+.spk-topic:last-child { border-bottom:1px solid #ddd5c8; }
+.spk-topic-head { display:grid; grid-template-columns:70px 1fr; gap:18px; align-items:start; }
+.spk-topic-num {
+  font-family:'Anton',sans-serif; font-size:34px; line-height:1; color:#c9bda6; letter-spacing:1px;
+}
+.spk-topic-title {
+  font-family:'Anton',sans-serif; font-size:26px; font-weight:400; color:#16232f;
+  margin:0 0 6px; letter-spacing:0.4px;
+}
+.spk-topic-sub {
+  font-family:'Oswald',sans-serif; font-size:14px; font-weight:600; letter-spacing:0.5px;
+  color:#8a6a28; margin:0 0 10px;
+}
+.spk-topic-who { font-size:14px; line-height:1.65; color:#5c6773; margin:0; max-width:640px; }
+.spk-topic-meta {
+  display:grid; grid-template-columns:1fr 1.4fr; gap:30px;
+  margin:20px 0 0 88px; padding-top:18px; border-top:1px dashed #ddd5c8;
+}
+.spk-meta-k {
+  display:block; font-family:'Oswald',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:1.5px; color:#9c9484; margin-bottom:7px;
+}
+.spk-meta-v { display:block; font-size:13.5px; line-height:1.6; color:#16232f; }
+.spk-meta-list { list-style:none; margin:0; padding:0; }
+.spk-meta-list li {
+  position:relative; padding-left:16px; font-size:13.5px; line-height:1.6;
+  color:#16232f; margin-bottom:6px;
+}
+.spk-meta-list li::before { content:''; position:absolute; left:0; top:9px; width:7px; height:1.5px; background:#d9a13f; }
+@media (max-width:760px){
+  .spk-topic-head { grid-template-columns:48px 1fr; gap:12px; }
+  .spk-topic-num { font-size:26px; }
+  .spk-topic-title { font-size:22px; }
+  .spk-topic-meta { grid-template-columns:1fr; gap:18px; margin-left:0; }
+}
+
+#spk-takeaways { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; max-width:900px; margin:0 auto; }
+#spk-takeaways div { border:1px solid rgba(217,161,63,0.35); border-radius:8px; padding:18px 14px; }
+#spk-takeaways p {
+  font-family:'Oswald',sans-serif; font-size:12.5px; font-weight:700;
+  letter-spacing:0.8px; color:#f5f2ec; margin:0;
+}
+@media (max-width:860px){ #spk-takeaways { grid-template-columns:1fr 1fr; } }
+
+#event-proof-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+@media (max-width:900px){ #event-proof-grid { grid-template-columns:1fr; } }
+
+#aud-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+.spk-aud { background:#0d1926; border:1px solid #1c2733; border-radius:8px; padding:24px 26px; }
+.spk-aud h3 {
+  font-family:'Oswald',sans-serif; font-size:14px; font-weight:700; letter-spacing:0.5px;
+  color:#ffffff; margin:0 0 8px;
+}
+.spk-aud p { font-size:13.5px; line-height:1.65; color:#9aa4ad; margin:0; }
+@media (max-width:760px){ #aud-grid { grid-template-columns:1fr; } }
+
+/* 7 named placeholder slots (Navy excluded — see HTML comment). Height-based
+   sizing (not fixed width) so a real <img class="logo-img"> can drop in later
+   without a layout rework: normalize by height, let width follow the logo's
+   own aspect ratio, per the client's own logo-pack usage notes. */
+#logo-bar { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:20px 34px; }
+.logo-slot {
+  display:flex; align-items:center; justify-content:center; height:64px; min-width:120px;
+  padding:0 18px; border:1px dashed #cfc4b2; border-radius:6px; background:#efe9e0;
+  font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:0.3px;
+  color:#8a8579; text-align:center;
+}
+.logo-img { height:64px; width:auto; max-width:180px; object-fit:contain; }
+@media (max-width:620px){ .logo-slot { height:56px; min-width:100px; font-size:11px; } .logo-img { height:52px; } }
+
+#planner-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+.planner-item {
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:20px 24px; border:1px solid #1c2733; border-radius:8px; background:#0d1926;
+  font-family:'Oswald',sans-serif; font-size:13px; font-weight:700; letter-spacing:0.6px;
+  color:#ffffff; text-decoration:none; transition:border-color .2s ease, background .2s ease;
+}
+a.planner-item:hover { border-color:#d9a13f; background:#101e2c; color:#ffffff; }
+.planner-arrow { color:#d9a13f; }
+.planner-item.is-pending { color:#6b7680; border-style:dashed; border-color:#2a3846; cursor:default; }
+.planner-note {
+  font-family:'Inter',sans-serif; font-size:11px; font-weight:400;
+  letter-spacing:0; color:#5c6773; font-style:italic;
+}
+@media (max-width:700px){ #planner-grid { grid-template-columns:1fr; } }
+
+/* reel switch — used once two reels exist */
+.reel-switch { display:flex; gap:10px; justify-content:center; margin-bottom:20px; }
+.reel-btn {
+  font-family:'Oswald',sans-serif; font-size:11.5px; font-weight:700; letter-spacing:1px;
+  color:#aab3ba; background:#0d1926; border:1px solid #22303e; border-radius:3px;
+  padding:10px 18px; cursor:pointer;
+}
+.reel-btn.is-active { color:#0a1420; background:#d9a13f; border-color:#d9a13f; }
+
+/* ---- RESOURCES · books, tools, film, latest ---- */
+.book-feature {
+  display:grid; grid-template-columns:230px 1fr; gap:44px; align-items:center;
+  background:#ffffff; border:1px solid #e2dad0; border-left:4px solid #d9a13f;
+  border-radius:10px; padding:36px 40px; margin-bottom:26px;
+  box-shadow:0 4px 18px rgba(0,0,0,0.05);
+}
+.book-cover-slot {
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px;
+  aspect-ratio:2/3; background:#efe9e0; border:1px dashed #cfc4b2; border-radius:6px;
+  text-align:center; padding:14px;
+}
+.book-cover-slot .asset-slot-title { color:#8a6a28; font-size:10px; }
+.book-cover-note { font-size:11px; color:#9c9484; font-style:italic; }
+/* Real cover renderings (Sep 2026). Natural ratio is already 2:3 — same as
+   the placeholder slot it replaces — so no cropping decision was needed. */
+.book-cover-img-lg {
+  width:100%; height:auto; display:block; border-radius:8px;
+  box-shadow:0 14px 34px rgba(0,0,0,0.18);
+}
+.book-cover-img {
+  width:140px; height:auto; display:block; margin:0 auto 4px; border-radius:6px;
+  box-shadow:0 10px 24px rgba(0,0,0,0.16);
+}
+.book-format-note { font-size:11.5px; color:#9c9484; font-style:italic; margin:14px 0 0; }
+.book-feature .book-format-note { margin-top:16px; }
+.book-flag {
+  display:inline-block; font-family:'Oswald',sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:1.4px; color:#0a1420; background:#d9a13f; padding:5px 11px;
+  border-radius:2px; margin-bottom:14px;
+}
+.book-title-lg {
+  font-family:'Anton',sans-serif; font-size:30px; line-height:1.12; font-weight:400;
+  color:#16232f; margin:0 0 14px; letter-spacing:0.4px;
+}
+.book-title {
+  font-family:'Anton',sans-serif; font-size:20px; line-height:1.18; font-weight:400;
+  color:#16232f; margin:18px 0 10px; letter-spacing:0.3px;
+}
+.book-desc { font-size:14.5px; line-height:1.7; color:#5c6773; margin:0 0 20px; }
+.book-actions { display:flex; align-items:center; gap:22px; flex-wrap:wrap; }
+.book-buy {
+  display:inline-block; font-family:'Oswald',sans-serif; font-size:12.5px; font-weight:700;
+  letter-spacing:0.8px; color:#0a1420; background:#d9a13f;
+  padding:14px 24px; border-radius:3px; text-decoration:none;
+}
+a.book-buy:hover { background:#e6b562; }
+.book-buy.is-pending {
+  background:transparent; color:#9c9484; border:1px dashed #cfc4b2; cursor:default;
+}
+.book-buy.is-pending em { font-style:italic; font-family:'Inter',sans-serif; font-weight:400; font-size:11px; }
+.book-secondary {
+  font-family:'Oswald',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.7px;
+  color:#16232f; border-bottom:1px solid #d9a13f;
+}
+.book-secondary:hover { color:#8a6a28; }
+#books-grid { display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+.book-card {
+  display:flex; flex-direction:column; background:#ffffff; border:1px solid #e2dad0;
+  border-radius:10px; padding:28px 30px;
+}
+.book-card .book-cover-slot { aspect-ratio:auto; height:132px; }
+.book-card .book-buy { margin-top:auto; align-self:flex-start; }
+@media (max-width:900px){
+  .book-feature { grid-template-columns:1fr; gap:26px; padding:28px 24px; }
+  .book-feature .book-cover-slot { max-width:200px; margin:0 auto; }
+  #books-grid { grid-template-columns:1fr; }
+  .book-title-lg { font-size:26px; }
+}
+
+#tools-grid { display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:22px; align-items:stretch; }
+.res-tile {
+  display:flex; flex-direction:column; background:#0d1926; border:1px solid #1c2733;
+  border-radius:10px; padding:28px 26px;
+}
+.res-tile.is-lead { border-top:3px solid #d9a13f; }
+.res-kicker {
+  font-family:'Oswald',sans-serif; font-size:10px; font-weight:700; letter-spacing:1.5px;
+  color:#d9a13f; margin-bottom:12px;
+}
+.res-title {
+  font-family:'Oswald',sans-serif; font-size:16px; font-weight:700; letter-spacing:0.4px;
+  color:#ffffff; margin:0 0 10px;
+}
+.res-copy { font-size:13.5px; line-height:1.7; color:#9aa4ad; margin:0 0 20px; }
+.res-cta {
+  font-family:'Oswald',sans-serif; font-size:12.5px; font-weight:700; letter-spacing:0.7px;
+  color:#d9a13f; margin-top:auto; align-self:flex-start; border-bottom:1px solid #3a4a5a;
+}
+.res-cta:hover { color:#e6b562; border-bottom-color:#d9a13f; }
+.res-cta.on-cream { color:#16232f; border-bottom-color:#d9a13f; }
+.res-cta.on-cream:hover { color:#8a6a28; }
+.res-trust { font-size:10.5px; letter-spacing:0.5px; color:#6b7680; margin:14px 0 0; }
+@media (max-width:900px){ #tools-grid { grid-template-columns:1fr; } }
+
+#vuca-grid { display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
+@media (max-width:900px){ #vuca-grid { grid-template-columns:1fr; gap:30px; } }
+
+#latest-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+@media (max-width:900px){ #latest-grid { grid-template-columns:1fr; } }
+
+/* ============================================================
+   REAL VIDEO ASSETS (2026 final pass)
+   Responsive embed wrapper — width:100%, ratio preserved, no
+   fixed dimensions, no overflow at any breakpoint.
+   ============================================================ */
+.video-embed {
+  position:relative; width:100%; aspect-ratio:16/9;
+  background:#0d1926; border:1px solid #1c2733; border-radius:12px;
+  overflow:hidden; box-shadow:0 26px 60px rgba(0,0,0,0.38);
+}
+.video-embed iframe,
+.video-embed video {
+  position:absolute; inset:0; width:100%; height:100%; border:0; display:block;
+}
+/* Patrick's file is 224x128 — its own ratio, so nothing is stretched */
+.video-embed.ratio-patrick { aspect-ratio:224/128; }
+
+/* ---- PROGRAMS · Dan proof is now a 16:9 Vimeo embed (was a portrait panel) ---- */
+#dan-proof { max-width:900px; margin:0 auto; }
+#dan-meta {
+  display:grid; grid-template-columns:1fr auto; gap:30px; align-items:end;
+  margin-top:26px; padding-top:24px; border-top:1px solid #1c2733;
+}
+#dan-meta #dan-arc { display:flex; gap:34px; margin:0; padding:0; list-style:none; }
+#dan-meta #dan-arc li { border-left:0; padding:0; }
+#dan-meta #dan-arc li::before { display:none; }
+#dan-meta #dan-name { margin:0 0 4px; }
+@media (max-width:820px){
+  #dan-meta { grid-template-columns:1fr; gap:20px; align-items:start; }
+  #dan-meta #dan-arc { flex-direction:column; gap:14px; }
+}
+
+/* ---- WHAT I DO · Timothy portrait player (same treatment as the homepage) ---- */
+#tim-stage { margin:0 auto 26px; display:flex; justify-content:center; }
+#tim-frame {
+  position:relative; width:258px; aspect-ratio:124/224;
+  border-radius:14px; overflow:hidden; background:#0a1420;
+  border:1px solid #1c2733; box-shadow:0 22px 54px rgba(0,0,0,0.44);
+}
+#tim-video { display:block; width:100%; height:100%; object-fit:cover; background:#0a1420; }
+#tim-play {
+  position:absolute; inset:0; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:14px;
+  border:0; cursor:pointer; padding:0;
+  background:linear-gradient(180deg, rgba(10,20,32,0.32) 0%, rgba(10,20,32,0.78) 100%);
+  transition:opacity .25s ease;
+}
+#tim-frame.is-playing #tim-play { opacity:0; pointer-events:none; }
+#tim-play:hover .play-btn { background:rgba(217,161,63,0.16); transform:scale(1.06); }
+@media (max-width:620px){ #tim-frame { width:216px; } }
+
+/* ---- SPEAKERS · event-leader proof with Patrick's real video ---- */
+#event-proof-grid { grid-template-columns:1.4fr 1fr; align-items:start; }
+.event-video { margin:0; }
+.event-video figcaption { margin-top:16px; }
+.event-name {
+  font-family:'Oswald',sans-serif; font-size:16px; font-weight:700;
+  letter-spacing:0.5px; color:#16232f; margin:0 0 3px;
+}
+.event-org {
+  font-family:'Oswald',sans-serif; font-size:12px; font-weight:600;
+  letter-spacing:1.4px; color:#8a6a28; margin:0;
+}
+.event-pending {
+  background:#efe9e0; border:1px dashed #cfc4b2; border-radius:10px;
+  padding:28px 26px; text-align:center;
+}
+.event-pending .asset-slot-title { display:block; color:#8a6a28; margin-bottom:10px; }
+.event-pending .asset-slot-note { color:#7d7466; margin:0; }
+@media (max-width:900px){ #event-proof-grid { grid-template-columns:1fr; } }
+
+/* Reverted Sep 2026: homepage proof panel is back to a portrait player
+   (Timothy Krambs) rather than the 16:9 Dan Mullins Vimeo embed, so the
+   original #dan-copy padding (44px 52px, declared above) applies unchanged.
+   Rule block kept empty rather than deleted, in case a future embed swap
+   needs this override again. */
+
+/* ============================================================
+   MINI-BOOK — "THE NEXT CHAPTER™" (mini-book.html)
+   Reading experience for the full manuscript. Reuses the site's
+   existing tokens only: Anton headings, Oswald kickers/labels,
+   Inter body, gold #d9a13f accents, navy/cream alternating
+   sections (same rhythm already used page-to-page across the site).
+   ============================================================ */
+
+.mb-chapter { padding:0; }
+.mb-chapter-inner { max-width:680px; margin:0 auto; padding:76px 60px; }
+.mb-bg-cream { background:#f3efe9; }
+.mb-bg-cream .mb-chapter-inner { color:#3c4650; }
+.mb-bg-navy { background:#0a1420; }
+
+.mb-chapter-label {
+  font-family:'Oswald',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px;
+  color:#8a6a28; margin:0 0 14px;
+}
+.mb-bg-navy .mb-chapter-label { color:#d9a13f; }
+
+.mb-h1 {
+  font-family:'Anton',sans-serif; font-weight:400; font-size:36px; line-height:1.15;
+  letter-spacing:0.5px; margin:0 0 30px; color:#16232f;
+}
+.mb-bg-navy .mb-h1 { color:#ffffff; }
+
+.mb-h2 {
+  font-family:'Oswald',sans-serif; font-weight:700; font-size:16px; letter-spacing:0.5px;
+  margin:36px 0 16px; color:#16232f;
+}
+.mb-bg-navy .mb-h2 { color:#ffffff; }
+
+.mb-body { font-size:16px; line-height:1.8; margin:0 0 18px; color:#4a5561; }
+.mb-bg-navy .mb-body { color:#c3ccd3; }
+
+.mb-pullquote {
+  font-family:'Anton',sans-serif; font-weight:400; font-size:26px; line-height:1.3;
+  letter-spacing:0.3px; margin:34px 0; padding:4px 0 4px 22px; border-left:3px solid #d9a13f;
+  color:#16232f;
+}
+.mb-bg-navy .mb-pullquote { color:#ffffff; }
+
+.mb-list { list-style:none; margin:0 0 20px; padding:0; }
+.mb-list li {
+  position:relative; padding-left:22px; font-size:15.5px; line-height:1.7;
+  margin-bottom:11px; color:#4a5561;
+}
+.mb-bg-navy .mb-list li { color:#c3ccd3; }
+.mb-list li::before { content:''; position:absolute; left:0; top:9px; width:9px; height:1.5px; background:#d9a13f; }
+
+/* label/definition pairs — the 8s, Decision Architecture's 4 moves, every-
+   session's 4 elements. Same visual idea as the site's existing arc-k/arc-v
+   and fw-step/fw-title kicker+label pattern, kept local to this page. */
+.mb-def-grid { display:grid; gap:22px; margin:28px 0 34px; }
+.mb-grid-5 { grid-template-columns:repeat(5,1fr); }
+.mb-grid-4 { grid-template-columns:repeat(4,1fr); }
+.mb-grid-3 { grid-template-columns:repeat(3,1fr); }
+.mb-grid-auto { grid-template-columns:1fr; }
+.mb-def-item {
+  padding:18px 18px 20px; border-radius:8px;
+  background:rgba(217,161,63,0.06); border:1px solid rgba(217,161,63,0.22);
+}
+.mb-bg-cream .mb-def-item { background:#ffffff; border-color:#e2dad0; }
+.mb-def-k {
+  display:block; font-family:'Oswald',sans-serif; font-size:11px; font-weight:700;
+  letter-spacing:1.4px; color:#8a6a28; margin-bottom:8px;
+}
+.mb-bg-navy .mb-def-k { color:#d9a13f; }
+.mb-def-v { display:block; font-size:13.5px; line-height:1.6; color:#5c6773; }
+.mb-bg-navy .mb-def-v { color:#9aa4ad; }
+
+/* the 90-day journey timeline (3 phases) */
+.mb-timeline { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin:28px 0 34px; }
+.mb-timeline-item {
+  display:flex; flex-direction:column; padding:20px 18px 22px; border-radius:8px;
+  background:rgba(217,161,63,0.06); border:1px solid rgba(217,161,63,0.22); border-top:3px solid #d9a13f;
+}
+.mb-bg-cream .mb-timeline-item { background:#ffffff; border-color:#e2dad0; border-top-color:#d9a13f; }
+.mb-timeline-days {
+  font-family:'Oswald',sans-serif; font-size:10px; font-weight:700; letter-spacing:1.2px;
+  color:#8b95a0; margin-bottom:6px;
+}
+.mb-timeline-name {
+  font-family:'Anton',sans-serif; font-weight:400; font-size:19px; letter-spacing:0.3px;
+  color:#16232f; margin-bottom:10px;
+}
+.mb-bg-navy .mb-timeline-name { color:#ffffff; }
+.mb-timeline-desc { font-size:13.5px; line-height:1.6; color:#5c6773; margin-bottom:10px; }
+.mb-bg-navy .mb-timeline-desc { color:#9aa4ad; }
+.mb-timeline-outcome {
+  font-size:12.5px; line-height:1.55; color:#8a6a28; font-weight:600; margin-top:auto; padding-top:10px;
+  border-top:1px dashed rgba(217,161,63,0.35);
+}
+.mb-bg-navy .mb-timeline-outcome { color:#d9a13f; }
+
+/* closing two-path cards */
+.mb-path-card {
+  padding:28px 26px 24px; border-radius:10px; background:#0d1926; border:1px solid #1c2733;
+}
+.mb-path-primary { border-color:#2b3a49; border-top:3px solid #d9a13f; }
+.mb-path-label {
+  font-family:'Oswald',sans-serif; font-weight:700; font-size:15px; letter-spacing:0.5px;
+  color:#ffffff; margin:0 0 10px;
+}
+.mb-path-copy { font-size:14px; line-height:1.65; color:#aab3ba; margin:0 0 22px; }
+.mb-path-btn { display:block; width:100%; text-align:center; box-sizing:border-box; }
+.mb-path-note { font-size:11px; line-height:1.5; color:#5c6773; margin:12px 0 0; text-align:center; }
+
+/* secondary "read the mini-book" bridge — used on Resources and Programs,
+   never on the homepage (the assessment stays the only homepage CTA). */
+.mb-bridge {
+  display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  padding:22px 28px; border-radius:8px; margin-top:34px;
+  background:rgba(217,161,63,0.05); border:1px dashed rgba(217,161,63,0.3);
+}
+.mb-bridge-copy { font-size:14px; line-height:1.6; color:#9aa4ad; margin:0; max-width:520px; }
+.mb-bg-cream .mb-bridge, #tools .mb-bridge ~ .mb-bridge { }
+.mb-bridge-link {
+  font-family:'Oswald',sans-serif; font-size:12.5px; font-weight:700; letter-spacing:0.6px;
+  color:#d9a13f; white-space:nowrap;
+}
+.mb-bridge-link:hover { color:#e6b562; }
+.mb-bridge.on-cream { background:#efe9e0; border-color:#cfc4b2; }
+.mb-bridge.on-cream .mb-bridge-copy { color:#5c6773; }
+.mb-bridge.on-cream .mb-bridge-link { color:#8a6a28; }
+.mb-bridge.on-cream .mb-bridge-link:hover { color:#6b5220; }
+
+@media (max-width:900px) {
+  .mb-grid-5, .mb-grid-4, .mb-grid-3 { grid-template-columns:1fr 1fr; }
+  .mb-timeline { grid-template-columns:1fr; }
+}
+@media (max-width:620px) {
+  .mb-grid-5, .mb-grid-4, .mb-grid-3 { grid-template-columns:1fr; }
+  .mb-bridge { flex-direction:column; align-items:flex-start; text-align:left; }
+}

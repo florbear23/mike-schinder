@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Mike Schindler, Decision Architect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* About-page-only rules */
+  .reveal { opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity:1; transform:none; }
+  .value-card { transition:transform .25s ease, box-shadow .25s ease; }
+  .value-card:hover { transform:translateY(-4px); box-shadow:0 10px 28px rgba(10,20,32,0.12); }
+  .btn-gold { transition:background .2s ease, transform .2s ease; }
+  .btn-gold:hover { background:#e6b562 !important; color:#0a1420; }
+  @media (max-width: 900px) {
+    #about-hero-grid { grid-template-columns:1fr !important; }
+    #about-intro-grid { grid-template-columns:1fr !important; gap:36px !important; }
+    #values-grid { grid-template-columns:repeat(2,1fr) !important; }
+    #process-grid { grid-template-columns:repeat(2,1fr) !important; }
+    #about-hero-card { position:static !important; margin-top:-40px; margin-left:20px; }
+  }
+  @media (max-width: 620px) {
+    #values-grid { grid-template-columns:1fr !important; }
+    #process-grid { grid-template-columns:1fr !important; }
+    #mission-quote { font-size:30px !important; }
+    #about-hero-title { font-size:42px !important; }
+    #proof-row { grid-template-columns:1fr 1fr !important; }
+  }
+</style>
+</head>
+<body>
+<div style="font-family:'Inter',sans-serif; background:#0a1420; overflow-x:clip;">
+
+  <!-- HEADER (same as Home) -->
+  <header style="position:sticky; top:0; z-index:100; background:#0a1420; box-shadow:0 1px 0 #1c2733;">
+    <div id="header-inner" style="display:flex; align-items:center; justify-content:space-between; padding:20px 60px; max-width:1200px; margin:0 auto;">
+      <a href="index.html" style="display:flex; flex-direction:column; line-height:1.1; text-decoration:none;">
+        <span style="font-family:'Oswald',sans-serif; font-weight:700; font-size:20px; letter-spacing:0.5px; color:#f5f2ec;">MIKE SCHINDLER</span>
+        <span style="font-family:'Oswald',sans-serif; font-weight:500; font-size:11px; letter-spacing:1.5px; color:#d9a13f;">DECISION ARCHITECT</span>
+      </a>
+      <nav style="display:flex; gap:32px; white-space:nowrap;" id="main-nav">
+        <a class="nav-link" href="index.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">HOME</a>
+        <a class="nav-link" href="about.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px; color:#ffffff; border-bottom:2px solid #d9a13f; padding-bottom:4px;">ABOUT</a>
+        <a class="nav-link" href="what-i-do.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">WHAT I DO</a>
+        <a class="nav-link" href="programs.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">PROGRAMS</a>
+        <a class="nav-link" href="speaking.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">SPEAKING</a>
+        <a class="nav-link" href="resources.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">RESOURCES</a>
+        <a class="nav-connect" href="connect.html" style="font-size:13px;">LET'S CONNECT</a>
+      </nav>
+      <a id="header-connect" href="connect.html" style="background:#d9a13f; color:#0a1420; font-size:13px; font-weight:700; letter-spacing:0.5px; padding:12px 22px; border-radius:3px; white-space:nowrap; text-decoration:none;">LET'S CONNECT</a>
+      <button id="menu-toggle" style="display:none; background:none; border:none; color:#fff; font-size:26px; cursor:pointer;">☰</button>
+    </div>
+  </header>
+
+  <!-- ABOUT HERO -->
+  <section class="about-hero" style="position:relative; background:#0a1420; overflow:hidden;">
+    <div style="position:absolute; inset:0; background:url('assets/mike-portrait.png') center 30%/cover no-repeat; filter:blur(36px) brightness(0.4) saturate(1.05); transform:scale(1.18);"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(10,20,32,0.94) 0%, rgba(10,20,32,0.8) 50%, rgba(10,20,32,0.45) 100%), linear-gradient(180deg, rgba(10,20,32,0.85) 0%, rgba(10,20,32,0) 35%, rgba(10,20,32,0.95) 100%);"></div>
+    <div id="about-hero-grid" style="position:relative; max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1.1fr 0.9fr; align-items:center; gap:50px; padding:80px 60px 90px;">
+      <div class="reveal">
+        <p style="font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:2px; color:#d9a13f; margin:0 0 16px;">ABOUT MIKE</p>
+        <h1 id="about-hero-title" style="font-family:'Anton',sans-serif; font-weight:400; font-size:56px; line-height:1.05; color:#ffffff; margin:0 0 22px; letter-spacing:1px;">CLARITY IS A DISCIPLINE.<br>NOT A COINCIDENCE.</h1>
+        <p style="font-size:16px; line-height:1.7; color:#c3ccd3; max-width:480px; margin:0 0 30px;">Mike Schindler is a US Navy veteran, author, and decision architect who helps successful leaders get clear when the old answers no longer work — and make the decisions that determine what comes next.</p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a class="btn-gold" href="index.html#assessment" style="display:inline-block; background:#d9a13f; color:#0a1420; font-family:'Oswald',sans-serif; font-size:13px; font-weight:700; letter-spacing:0.5px; padding:16px 28px; border-radius:3px; text-decoration:none;">TAKE THE ASSESSMENT →</a>
+          <a href="index.html#speaking" style="display:inline-block; background:transparent; color:#f5f2ec; font-family:'Oswald',sans-serif; font-size:13px; font-weight:700; letter-spacing:0.5px; padding:16px 28px; border-radius:3px; border:1px solid #3a4653; text-decoration:none;">WAYS TO WORK TOGETHER</a>
+        </div>
+      </div>
+      <div class="reveal" style="position:relative; min-height:440px;">
+        <img fetchpriority="high" decoding="async" width="480" height="560" src="assets/mike-portrait.png" alt="Portrait of Mike Schindler" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 12%; border-radius:8px; box-shadow:0 22px 54px rgba(0,0,0,0.44);">
+        <div style="position:absolute; inset:0; border-radius:8px; pointer-events:none; background:linear-gradient(0deg, rgba(10,20,32,0.55) 0%, rgba(10,20,32,0) 38%);"></div>
+        <div id="about-hero-card" style="position:absolute; left:-34px; bottom:28px; background:#0d1926; border:1px solid #1c2733; border-radius:8px; padding:18px 22px; box-shadow:0 14px 34px rgba(0,0,0,0.4);">
+          <p style="font-family:'Anton',sans-serif; font-size:26px; color:#d9a13f; margin:0 0 2px; letter-spacing:0.5px;">7,500+</p>
+          <p style="font-family:'Oswald',sans-serif; font-size:11px; font-weight:600; letter-spacing:1px; color:#e8ecef; margin:0;">LEADERS IMPACTED</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPANY INTRODUCTION -->
+  <section class="about-intro" style="background:#f3efe9; padding:80px 60px;">
+    <div id="about-intro-grid" style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:0.9fr 1.1fr; gap:70px; align-items:start;">
+      <div class="reveal">
+        <p style="font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:2px; color:#d9a13f; margin:0 0 12px;">WHO HE IS</p>
+        <h2 style="font-family:'Anton',sans-serif; font-size:32px; font-weight:400; color:#16232f; margin:0 0 0; letter-spacing:0.5px; line-height:1.15;">A DECISION ARCHITECT FOR LEADERS AT AN INFLECTION POINT.</h2>
+        <div style="width:48px; height:2px; background:#d9a13f; margin-top:22px;"></div>
+      </div>
+      <div class="reveal">
+        <p style="font-size:15px; line-height:1.8; color:#3c4650; margin:0 0 18px;">Success changes. So does what you want. Mike works with successful people navigating the moments when what got them here no longer tells them where to go next — a role that's changing, a company that's been built, a mission that's ended.</p>
+        <p style="font-size:15px; line-height:1.8; color:#3c4650; margin:0 0 18px;">A US Navy veteran, author of three books, keynote speaker, and co-executive producer of It's VUCA, Mike built Human 10.0™ — a decision-clarity system that helps leaders get clear on what they actually want, identify the decisions that matter, explore the paths available, and turn clarity into action.</p>
+        <p style="font-size:15px; line-height:1.8; color:#3c4650; margin:0;">His work rests on one conviction: don't decide what's next until you're clear on what you want.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT MAKES HIM DIFFERENT -->
+  <section class="about-values" style="background:#0a1420; padding:80px 60px;">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div class="reveal" style="text-align:center; margin-bottom:48px;">
+        <p style="font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:2px; color:#d9a13f; margin:0 0 12px;">THE DIFFERENCE</p>
+        <h2 style="font-family:'Anton',sans-serif; font-size:32px; font-weight:400; color:#ffffff; margin:0; letter-spacing:0.5px;">CLARITY BEFORE DECISIONS.</h2>
+      </div>
+      <div id="values-grid" class="reveal" style="display:grid; grid-template-columns:repeat(4,1fr); gap:22px;">
+        <div class="value-card" style="background:#0d1926; border:1px solid #1c2733; border-radius:8px; padding:28px 24px;">
+          <div style="width:52px; height:52px; border-radius:50%; background:#16232f; display:flex; align-items:center; justify-content:center; margin-bottom:18px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d9a13f" stroke-width="1.6"><path d="M8 21v-3.5C5.6 16 4 13.7 4 11a8 8 0 0116 0c0 1.2-.4 2.3-1 3.2l1 2.3-2.5.5V21"/><circle cx="12" cy="10" r="2.5"/><path d="M12 12.5V14"/></svg>
+          </div>
+          <h3 style="font-family:'Oswald',sans-serif; font-size:15px; font-weight:700; color:#ffffff; margin:0 0 8px; letter-spacing:0.4px;">CLARITY FIRST</h3>
+          <p style="font-size:13px; line-height:1.7; color:#9aa4ad; margin:0;">Get clear on what you really want now — not what you're supposed to want.</p>
+        </div>
+        <div class="value-card" style="background:#0d1926; border:1px solid #1c2733; border-radius:8px; padding:28px 24px;">
+          <div style="width:52px; height:52px; border-radius:50%; background:#16232f; display:flex; align-items:center; justify-content:center; margin-bottom:18px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d9a13f" stroke-width="1.6"><circle cx="12" cy="5" r="2"/><path d="M12 7v5M12 12l-5 6M12 12l5 6"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg>
+          </div>
+          <h3 style="font-family:'Oswald',sans-serif; font-size:15px; font-weight:700; color:#ffffff; margin:0 0 8px; letter-spacing:0.4px;">THE REAL DECISION</h3>
+          <p style="font-size:13px; line-height:1.7; color:#9aa4ad; margin:0;">Separate the decision that actually matters from the noise, pressure and assumptions.</p>
+        </div>
+        <div class="value-card" style="background:#0d1926; border:1px solid #1c2733; border-radius:8px; padding:28px 24px;">
+          <div style="width:52px; height:52px; border-radius:50%; background:#16232f; display:flex; align-items:center; justify-content:center; margin-bottom:18px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d9a13f" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>
+          </div>
+          <h3 style="font-family:'Oswald',sans-serif; font-size:15px; font-weight:700; color:#ffffff; margin:0 0 8px; letter-spacing:0.4px;">A CHOSEN DIRECTION</h3>
+          <p style="font-size:13px; line-height:1.7; color:#9aa4ad; margin:0;">Explore your best options and design a path that fits who you are now.</p>
+        </div>
+        <div class="value-card" style="background:#0d1926; border:1px solid #1c2733; border-radius:8px; padding:28px 24px;">
+          <div style="width:52px; height:52px; border-radius:50%; background:#16232f; display:flex; align-items:center; justify-content:center; margin-bottom:18px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d9a13f" stroke-width="1.6"><circle cx="14.5" cy="4.5" r="1.8"/><path d="M9 9.5l3.5-1.5 2 3 3 1M12.5 8l-1.5 5 3 2.5-1 5M11 13l-2.5 2L6 20M14 4.8L11 6 9 9.5"/></svg>
+          </div>
+          <h3 style="font-family:'Oswald',sans-serif; font-size:15px; font-weight:700; color:#ffffff; margin:0 0 8px; letter-spacing:0.4px;">ACTION, NOT ADVICE</h3>
+          <p style="font-size:13px; line-height:1.7; color:#9aa4ad; margin:0;">Turn clarity into momentum and build the next chapter intentionally.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION STATEMENT -->
+  <section class="about-mission" style="position:relative; background:#0a1420; overflow:hidden; border-top:1px solid #1c2733; border-bottom:1px solid #1c2733;">
+    <div style="position:absolute; inset:0; background:url('assets/card-founder.png') center/cover no-repeat; filter:blur(8px) brightness(0.27); transform:scale(1.08);"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,20,32,0.7), rgba(10,20,32,0.85));"></div>
+    <div class="reveal" style="position:relative; max-width:1200px; margin:0 auto; padding:110px 60px; text-align:center;">
+      <div style="width:48px; height:2px; background:#d9a13f; margin:0 auto 28px;"></div>
+      <p id="mission-quote" style="font-family:'Anton',sans-serif; font-size:44px; line-height:1.2; color:#ffffff; margin:0 auto 24px; max-width:860px; letter-spacing:0.5px;">"DON'T DECIDE WHAT'S NEXT UNTIL YOU'RE CLEAR ON WHAT YOU WANT."</p>
+      <p style="font-family:'Oswald',sans-serif; font-size:13px; font-weight:600; letter-spacing:1.5px; color:#d9a13f; margin:0;">MICHAEL SCHINDLER <span style="color:#6b7680;">|</span> DECISION ARCHITECT</p>
+    </div>
+  </section>
+
+  <!-- PROOF / CREDENTIALS -->
+  <section class="about-proof" style="background:#f3efe9; padding:80px 60px;">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div class="reveal" style="text-align:center; margin-bottom:48px;">
+        <p style="font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:2px; color:#d9a13f; margin:0 0 12px;">TRACK RECORD</p>
+        <h2 style="font-family:'Anton',sans-serif; font-size:32px; font-weight:400; color:#16232f; margin:0; letter-spacing:0.5px;">EXPERIENCE THAT'S BEEN TESTED.</h2>
+      </div>
+      <div id="proof-row" class="reveal" style="display:grid; grid-template-columns:repeat(4,1fr); gap:22px; text-align:center;">
+        <div style="background:#ffffff; border-radius:8px; padding:32px 20px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+          <p style="font-family:'Anton',sans-serif; font-size:34px; color:#16232f; margin:0 0 6px;">7,500+</p>
+          <p style="font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:1px; color:#5c6773; margin:0;">LEADERS IMPACTED</p>
+        </div>
+        <div style="background:#ffffff; border-radius:8px; padding:32px 20px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+          <p style="font-family:'Anton',sans-serif; font-size:34px; color:#16232f; margin:0 0 6px;">3</p>
+          <p style="font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:1px; color:#5c6773; margin:0;">BOOKS AUTHORED</p>
+        </div>
+        <div style="background:#ffffff; border-radius:8px; padding:32px 20px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+          <p style="font-family:'Anton',sans-serif; font-size:34px; color:#16232f; margin:0 0 6px;">US NAVY</p>
+          <p style="font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:1px; color:#5c6773; margin:0;">VETERAN</p>
+        </div>
+        <div style="background:#ffffff; border-radius:8px; padding:32px 20px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+          <p style="font-family:'Anton',sans-serif; font-size:34px; color:#16232f; margin:0 0 6px;">IT'S VUCA</p>
+          <p style="font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:1px; color:#5c6773; margin:0;">CO-EXECUTIVE PRODUCER</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="about-process" style="background:#0a1420; padding:80px 60px;">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div class="reveal" style="text-align:center; margin-bottom:52px;">
+        <p style="font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:2px; color:#d9a13f; margin:0 0 12px;">HOW HE WORKS</p>
+        <h2 style="font-family:'Anton',sans-serif; font-size:32px; font-weight:400; color:#ffffff; margin:0; letter-spacing:0.5px;">FROM STUCK TO WHAT'S NEXT.</h2>
+      </div>
+      <div id="process-grid" class="reveal" style="display:grid; grid-template-columns:repeat(4,1fr); gap:40px; position:relative;">
+        <div style="position:relative;">
+          <p style="font-family:'Anton',sans-serif; font-size:44px; color:#1c2733; margin:0 0 10px; -webkit-text-stroke:1px #d9a13f;">01</p>
+          <h3 style="font-family:'Oswald',sans-serif; font-size:15px; font-weight:700; color:#ffffff; margin:0 0 8px; letter-spacing:0.4px;">CLARITY</h3>
+          <p style="font-size:13px; line-height:1.7; color:#9aa4ad; margin:0;">Get clear on what you really want.</p>
+        </div>
+        <div style="position:relative;">
+          <p style="font-family:'Anton',sans-serif; font-size:44px; color:#1c2733; margin:0 0 10px; -webkit-text-stroke:1px #d9a13f;">02</p>
+          <h3 style="font-family:'Oswald',sans-serif; font-size:15px; font-weight:700; color:#ffffff; margin:0 0 8px; letter-spacing:0.4px;">DECISION</h3>
+          <p style="font-size:13px; line-height:1.7; color:#9aa4ad; margin:0;">Identify the decision that actually matters.</p>
+        </div>
+        <div style="position:relative;">
+          <p style="font-family:'Anton',sans-serif; font-size:44px; color:#1c2733; margin:0 0 10px; -webkit-text-stroke:1px #d9a13f;">03</p>
+          <h3 style="font-family:'Oswald',sans-serif; font-size:15px; font-weight:700; color:#ffffff; margin:0 0 8px; letter-spacing:0.4px;">DIRECTION</h3>
+          <p style="font-size:13px; line-height:1.7; color:#9aa4ad; margin:0;">Explore options and choose your path.</p>
+        </div>
+        <div style="position:relative;">
+          <p style="font-family:'Anton',sans-serif; font-size:44px; color:#1c2733; margin:0 0 10px; -webkit-text-stroke:1px #d9a13f;">04</p>
+          <h3 style="font-family:'Oswald',sans-serif; font-size:15px; font-weight:700; color:#ffffff; margin:0 0 8px; letter-spacing:0.4px;">ACTION</h3>
+          <p style="font-size:13px; line-height:1.7; color:#9aa4ad; margin:0;">Take action with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="cta" class="about-cta" style="background:#f3efe9; padding:90px 60px;">
+    <div class="reveal" style="max-width:760px; margin:0 auto; text-align:center;">
+      <h2 style="font-family:'Anton',sans-serif; font-size:38px; font-weight:400; color:#16232f; margin:0 0 16px; letter-spacing:0.5px;">READY TO GET CLEAR ON WHAT'S NEXT?</h2>
+      <p style="font-size:15px; line-height:1.7; color:#5c6773; margin:0 0 32px;">Start with the Decision Clarity Assessment — a personalized snapshot of where you're clear, where you're stuck, and what may be keeping you from moving forward.</p>
+      <a class="btn-gold" href="index.html#assessment" style="display:inline-block; background:#d9a13f; color:#0a1420; font-family:'Oswald',sans-serif; font-size:13px; font-weight:700; letter-spacing:0.5px; padding:17px 34px; border-radius:3px; text-decoration:none;">TAKE THE FREE ASSESSMENT →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER (same as Home) -->
+  <footer id="contact" style="background:#0a1420; padding:34px 60px;">
+    <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; padding-bottom:20px; border-bottom:1px solid #1c2733;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="width:38px; height:38px; border-radius:6px; border:1.5px solid #d9a13f; display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:'Oswald',sans-serif; font-size:13px; font-weight:700; color:#d9a13f;">MS</span>
+        </div>
+        <div style="line-height:1.15;">
+          <div style="font-family:'Oswald',sans-serif; font-size:14px; font-weight:700; color:#f5f2ec;">MIKE SCHINDLER</div>
+          <div style="font-family:'Oswald',sans-serif; font-size:10px; font-weight:500; letter-spacing:1px; color:#d9a13f;">DECISION ARCHITECT</div>
+        </div>
+      </div>
+      <nav style="display:flex; gap:22px; flex-wrap:wrap;">
+        <a class="nav-link" href="about.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">ABOUT MIKE</a>
+        <a class="nav-link" href="programs.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">HUMAN 10.0</a>
+        <a class="nav-link" href="index.html#what-i-do" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">VUCAMAX</a>
+        <a class="nav-link" href="speaking.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">SPEAKING</a>
+        <a class="nav-link" href="resources.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">RESOURCES</a>
+        <a class="nav-link" href="connect.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">CONTACT</a>
+      </nav>
+      <div style="display:flex; gap:10px;">
+        <a href="#" style="width:30px; height:30px; border-radius:50%; background:#0d1926; display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#d9a13f"><path d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1.02 4.6 1.02 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zM1.5 8.5h3v14h-3v-14zm6.5 0h2.9v1.9h.04c.4-.8 1.4-1.9 3-1.9 3.2 0 3.8 2.1 3.8 4.8v7.2h-3v-6.4c0-1.5 0-3.5-2.1-3.5s-2.4 1.7-2.4 3.4v6.5h-3v-14z"/></svg></a>
+        <a href="#" style="width:30px; height:30px; border-radius:50%; background:#0d1926; display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#d9a13f"><path d="M22 8.4s-.2-1.6-.8-2.3c-.8-.9-1.7-.9-2.1-1C16.4 5 12 5 12 5s-4.4 0-7.1.1c-.4 0-1.3.1-2.1 1-.6.7-.8 2.3-.8 2.3S1.8 10.3 1.8 12.1v1.7c0 1.8.2 3.7.2 3.7s.2 1.6.8 2.3c.8.9 1.9.9 2.4 1 1.7.2 7.3.2 7.3.2s4.4 0 7.1-.1c.4 0 1.3-.1 2.1-1 .6-.7.8-2.3.8-2.3s.2-1.9.2-3.7v-1.7c0-1.8-.2-3.7-.2-3.7zM9.9 15.5V9.4l5.4 3-5.4 3.1z"/></svg></a>
+        <a href="#" style="width:30px; height:30px; border-radius:50%; background:#0d1926; display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d9a13f" stroke-width="1.6"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 7l10 7 10-7"/></svg></a>
+      </div>
+    </div>
+    <p style="text-align:center; font-size:12px; color:#6b7680; margin:18px 0 0;">© 2025 Michael Schindler. All Rights Reserved.</p>
+  </footer>
+
+</div>
+<script src="js/script.js"></script>
+<script>
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in');}); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>
+</body>
+</html>
