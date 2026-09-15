@@ -30,6 +30,38 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+/* ============================================================
+   SKOOL URL — SINGLE CONFIGURATION POINT
+   Human 10.0 is being held free in the Skool community while the paid
+   experience is on hold (client direction, Sep 2026). No Skool group URL has
+   been supplied yet, so it is deliberately not set below — inventing one
+   would silently send real visitors to a group that may not exist or may not
+   be the right one.
+
+   Every "join Human 10.0" CTA on the site carries data-cta="skool" and a
+   safe existing fallback href (a pre-filled connect.html message) so the
+   link always does something real. Once the client supplies the Skool
+   group's join URL:
+
+     1. set SKOOL_URL below to that exact URL
+     2. every CTA carrying data-cta="skool" updates automatically on page load
+        (opens in a new tab, since Skool is an external destination)
+
+   No other file needs to change. Until that URL exists, this script is a
+   deliberate no-op (SKOOL_URL is null) and every CTA keeps working via its
+   existing fallback href. */
+var SKOOL_URL = null; // e.g. 'https://www.skool.com/human-10-0'
+
+document.addEventListener('DOMContentLoaded', function () {
+  if (SKOOL_URL) {
+    document.querySelectorAll('[data-cta="skool"]').forEach(function (a) {
+      a.href = SKOOL_URL;
+      a.target = '_blank';
+      a.rel = 'noopener';
+    });
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   var btn = document.getElementById('menu-toggle');
   var nav = document.getElementById('main-nav');
