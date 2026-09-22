@@ -1,5 +1,12 @@
 .nav-connect { display:none; }
 body { margin:0; background:#0a1420; }
+.skip-link {
+  position:absolute; top:-48px; left:8px; z-index:200;
+  background:#d9a13f; color:#0a1420; font-family:Oswald,sans-serif;
+  font-size:13px; font-weight:700; padding:12px 18px; border-radius:3px;
+  text-decoration:none; transition:top .15s ease;
+}
+.skip-link:focus { top:8px; }
     * { box-sizing:border-box; }
     a { color:#d9a13f; text-decoration:none; }
     a:hover { color:#e6b562; }
@@ -92,7 +99,7 @@ body { margin:0; background:#0a1420; }
 .rec-body { display:block; max-width:660px; }
 .rec-label {
   display:block; font-family:'Oswald',sans-serif; font-size:11px; font-weight:700;
-  letter-spacing:1.6px; color:#8a6a28; margin-bottom:8px;
+  letter-spacing:1.6px; color:#7a5c1f; margin-bottom:8px;
 }
 /* the recognition line — sized to be read first */
 .rec-text {
@@ -255,7 +262,7 @@ body { margin:0; background:#0a1420; }
   margin-top:auto; padding-top:18px; display:inline-block;
 }
 .offer-link-dark { color:#16232f; border-bottom:1px solid #d9a13f; align-self:flex-start; }
-.offer-link-dark:hover { color:#8a6a28; }
+.offer-link-dark:hover { color:#7a5c1f; }
 .offer-link-gold { color:#d9a13f; border-bottom:1px solid #3a4a5a; padding-top:0; }
 .offer-link-gold:hover { color:#e6b562; border-bottom-color:#d9a13f; }
 
@@ -525,7 +532,7 @@ img[src*="detail-"], img[src*="card-"] {
   font-family:'Oswald',sans-serif; font-size:12px; font-weight:700;
   letter-spacing:1.5px; color:#d9a13f;
 }
-.asset-slot.on-cream .asset-slot-title { color:#8a6a28; }
+.asset-slot.on-cream .asset-slot-title { color:#7a5c1f; }
 .asset-slot-note { font-size:12.5px; line-height:1.6; max-width:340px; margin:0; }
 .asset-slot-video { aspect-ratio:16/9; }
 .asset-slot-portrait { aspect-ratio:124/224; }
@@ -560,7 +567,7 @@ img[src*="detail-"], img[src*="card-"] {
 }
 .path-tag {
   font-family:'Oswald',sans-serif; font-size:13px; font-weight:600;
-  letter-spacing:0.6px; color:#8a6a28; margin:0 0 14px;
+  letter-spacing:0.6px; color:#7a5c1f; margin:0 0 14px;
 }
 .path-copy { font-size:14px; line-height:1.7; color:#5c6773; margin:0 0 18px; }
 .path-best {
@@ -576,7 +583,11 @@ img[src*="detail-"], img[src*="card-"] {
   letter-spacing:0.8px; color:#16232f; border-bottom:1px solid #d9a13f;
   align-self:flex-start;
 }
-.path-cta:hover { color:#8a6a28; }
+.path-cta:hover { color:#7a5c1f; }
+/* primary card has a navy background — the default dark-ink CTA text is
+   nearly invisible there, so it needs its own light/gold treatment */
+.is-primary .path-cta { color:#ffffff; }
+.is-primary .path-cta:hover { color:#d9a13f; }
 /* the private engagement, wherever it appears alongside the others */
 .path-card.is-primary {
   background:#0a1420; border:1px solid #2b3a49; border-top:3px solid #d9a13f;
@@ -689,7 +700,7 @@ img[src*="detail-"], img[src*="card-"] {
 }
 .spk-topic-sub {
   font-family:'Oswald',sans-serif; font-size:14px; font-weight:600; letter-spacing:0.5px;
-  color:#8a6a28; margin:0 0 10px;
+  color:#7a5c1f; margin:0 0 10px;
 }
 .spk-topic-who { font-size:14px; line-height:1.65; color:#5c6773; margin:0; max-width:640px; }
 .spk-topic-meta {
@@ -785,7 +796,7 @@ a.planner-item:hover { border-color:#d9a13f; background:#101e2c; color:#ffffff; 
   aspect-ratio:2/3; background:#efe9e0; border:1px dashed #cfc4b2; border-radius:6px;
   text-align:center; padding:14px;
 }
-.book-cover-slot .asset-slot-title { color:#8a6a28; font-size:10px; }
+.book-cover-slot .asset-slot-title { color:#7a5c1f; font-size:10px; }
 .book-cover-note { font-size:11px; color:#9c9484; font-style:italic; }
 /* Real cover renderings (Sep 2026). Natural ratio is already 2:3 — same as
    the placeholder slot it replaces — so no cropping decision was needed. */
@@ -797,7 +808,7 @@ a.planner-item:hover { border-color:#d9a13f; background:#101e2c; color:#ffffff; 
   width:140px; height:auto; display:block; margin:0 auto 4px; border-radius:6px;
   box-shadow:0 10px 24px rgba(0,0,0,0.16);
 }
-.book-format-note { font-size:11.5px; color:#9c9484; font-style:italic; margin:14px 0 0; }
+.book-format-note { font-size:11.5px; color:#6b6355; font-style:italic; margin:14px 0 0; }
 .book-feature .book-format-note { margin-top:16px; }
 .book-flag {
   display:inline-block; font-family:'Oswald',sans-serif; font-size:10px; font-weight:700;
@@ -828,7 +839,7 @@ a.book-buy:hover { background:#e6b562; }
   font-family:'Oswald',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.7px;
   color:#16232f; border-bottom:1px solid #d9a13f;
 }
-.book-secondary:hover { color:#8a6a28; }
+.book-secondary:hover { color:#7a5c1f; }
 #books-grid { display:grid; grid-template-columns:1fr 1fr; gap:26px; }
 .book-card {
   display:flex; flex-direction:column; background:#ffffff; border:1px solid #e2dad0;
@@ -864,8 +875,8 @@ a.book-buy:hover { background:#e6b562; }
 }
 .res-cta:hover { color:#e6b562; border-bottom-color:#d9a13f; }
 .res-cta.on-cream { color:#16232f; border-bottom-color:#d9a13f; }
-.res-cta.on-cream:hover { color:#8a6a28; }
-.res-trust { font-size:10.5px; letter-spacing:0.5px; color:#6b7680; margin:14px 0 0; }
+.res-cta.on-cream:hover { color:#7a5c1f; }
+.res-trust { font-size:10.5px; letter-spacing:0.5px; color:#8b95a0; margin:14px 0 0; }
 @media (max-width:900px){ #tools-grid { grid-template-columns:1fr; } }
 
 #vuca-grid { display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
@@ -935,13 +946,13 @@ a.book-buy:hover { background:#e6b562; }
 }
 .event-org {
   font-family:'Oswald',sans-serif; font-size:12px; font-weight:600;
-  letter-spacing:1.4px; color:#8a6a28; margin:0;
+  letter-spacing:1.4px; color:#7a5c1f; margin:0;
 }
 .event-pending {
   background:#efe9e0; border:1px dashed #cfc4b2; border-radius:10px;
   padding:28px 26px; text-align:center;
 }
-.event-pending .asset-slot-title { display:block; color:#8a6a28; margin-bottom:10px; }
+.event-pending .asset-slot-title { display:block; color:#7a5c1f; margin-bottom:10px; }
 .event-pending .asset-slot-note { color:#7d7466; margin:0; }
 @media (max-width:900px){ #event-proof-grid { grid-template-columns:1fr; } }
 
@@ -967,7 +978,7 @@ a.book-buy:hover { background:#e6b562; }
 
 .mb-chapter-label {
   font-family:'Oswald',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px;
-  color:#8a6a28; margin:0 0 14px;
+  color:#7a5c1f; margin:0 0 14px;
 }
 .mb-bg-navy .mb-chapter-label { color:#d9a13f; }
 
@@ -1016,7 +1027,7 @@ a.book-buy:hover { background:#e6b562; }
 .mb-bg-cream .mb-def-item { background:#ffffff; border-color:#e2dad0; }
 .mb-def-k {
   display:block; font-family:'Oswald',sans-serif; font-size:11px; font-weight:700;
-  letter-spacing:1.4px; color:#8a6a28; margin-bottom:8px;
+  letter-spacing:1.4px; color:#7a5c1f; margin-bottom:8px;
 }
 .mb-bg-navy .mb-def-k { color:#d9a13f; }
 .mb-def-v { display:block; font-size:13.5px; line-height:1.6; color:#5c6773; }
@@ -1041,7 +1052,7 @@ a.book-buy:hover { background:#e6b562; }
 .mb-timeline-desc { font-size:13.5px; line-height:1.6; color:#5c6773; margin-bottom:10px; }
 .mb-bg-navy .mb-timeline-desc { color:#9aa4ad; }
 .mb-timeline-outcome {
-  font-size:12.5px; line-height:1.55; color:#8a6a28; font-weight:600; margin-top:auto; padding-top:10px;
+  font-size:12.5px; line-height:1.55; color:#7a5c1f; font-weight:600; margin-top:auto; padding-top:10px;
   border-top:1px dashed rgba(217,161,63,0.35);
 }
 .mb-bg-navy .mb-timeline-outcome { color:#d9a13f; }
@@ -1057,7 +1068,7 @@ a.book-buy:hover { background:#e6b562; }
 }
 .mb-path-copy { font-size:14px; line-height:1.65; color:#aab3ba; margin:0 0 22px; }
 .mb-path-btn { display:block; width:100%; text-align:center; box-sizing:border-box; }
-.mb-path-note { font-size:11px; line-height:1.5; color:#5c6773; margin:12px 0 0; text-align:center; }
+.mb-path-note { font-size:11px; line-height:1.5; color:#8b95a0; margin:12px 0 0; text-align:center; }
 
 /* secondary "read the mini-book" bridge — used on Resources and Programs,
    never on the homepage (the assessment stays the only homepage CTA). */
@@ -1075,7 +1086,7 @@ a.book-buy:hover { background:#e6b562; }
 .mb-bridge-link:hover { color:#e6b562; }
 .mb-bridge.on-cream { background:#efe9e0; border-color:#cfc4b2; }
 .mb-bridge.on-cream .mb-bridge-copy { color:#5c6773; }
-.mb-bridge.on-cream .mb-bridge-link { color:#8a6a28; }
+.mb-bridge.on-cream .mb-bridge-link { color:#7a5c1f; }
 .mb-bridge.on-cream .mb-bridge-link:hover { color:#6b5220; }
 
 @media (max-width:900px) {

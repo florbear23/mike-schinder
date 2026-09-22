@@ -8,8 +8,11 @@
 
    EVERY assessment CTA on the site (22 of them, across index/about/connect/
    programs/resources/what-i-do.html) carries data-cta="assessment" and a
-   safe existing href of index.html#assessment (or #assessment, on the
-   homepage itself) as a no-JS fallback. Once GHL publishes the real URL:
+   safe existing fallback href as a no-JS fallback: most link to the
+   assessment preview panel on the homepage (/#assessment); the two CTAs
+   that live inside that panel itself (index.html and programs.html) instead
+   fall back to the contact form, since scrolling to the section they're
+   already in would be a dead end. Once GHL publishes the real URL:
 
      1. set ASSESSMENT_URL below to that exact URL
      2. every one of those 22 links updates automatically on page load
@@ -66,9 +69,27 @@ document.addEventListener('DOMContentLoaded', function () {
   var btn = document.getElementById('menu-toggle');
   var nav = document.getElementById('main-nav');
   if (btn && nav) {
-    btn.addEventListener('click', function () { nav.classList.toggle('open'); });
+    function closeMenu() {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open menu');
+    }
+    function openMenu() {
+      nav.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      btn.setAttribute('aria-label', 'Close menu');
+    }
+    btn.addEventListener('click', function () {
+      if (nav.classList.contains('open')) closeMenu(); else openMenu();
+    });
     nav.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () { nav.classList.remove('open'); });
+      a.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        closeMenu();
+        btn.focus();
+      }
     });
   }
 });

@@ -3,9 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://mikeschindler.com/mini-book">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mike Schindler">
+<meta property="og:title" content="The Next Chapter — Free Mini-Book | Mike Schindler">
+<meta property="og:description" content="A short guide for successful people navigating What's Next? — Mike's story, the 8s, Decision Architecture, and how The Next Chapter works. About 15–20 minutes.">
+<meta property="og:url" content="https://mikeschindler.com/mini-book">
+<meta property="og:image" content="https://mikeschindler.com/assets/og-share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Next Chapter — Free Mini-Book | Mike Schindler">
+<meta name="twitter:description" content="A short guide for successful people navigating What's Next? — Mike's story, the 8s, Decision Architecture, and how The Next Chapter works. About 15–20 minutes.">
+<meta name="twitter:image" content="https://mikeschindler.com/assets/og-share.png">
 <title>The Next Chapter™ — Free Mini-Book | Mike Schindler</title>
 <meta name="description" content="A short guide for successful people navigating What's Next? — Mike's story, the 8s, Decision Architecture™, and how The Next Chapter™ works. About 15–20 minutes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
@@ -42,57 +60,86 @@
     .mb-def-grid.mb-grid-5, .mb-def-grid.mb-grid-4, .mb-def-grid.mb-grid-3 { grid-template-columns:1fr !important; }
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://mikeschindler.com/#person",
+      "name": "Michael Schindler",
+      "alternateName": "Mike Schindler",
+      "jobTitle": "Decision Architect",
+      "url": "https://mikeschindler.com/",
+      "image": "https://mikeschindler.com/assets/mike-portrait.png",
+      "affiliation": { "@type": "Organization", "name": "U.S. Navy" },
+      "description": "U.S. Navy veteran, three-time author, and Decision Architect helping successful leaders navigate consequential decisions."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://mikeschindler.com/#website",
+      "name": "Mike Schindler — Decision Architect",
+      "url": "https://mikeschindler.com/",
+      "publisher": { "@id": "https://mikeschindler.com/#person" }
+    }
+  ]
+}
+</script>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
 </head>
 <body>
-<div style="font-family:'Inter',sans-serif; background:#0a1420; overflow-x:clip;">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div style="font-family:Inter,sans-serif; background:#0a1420; overflow-x:clip;">
 
   <!-- HEADER -->
   <header style="position:sticky; top:0; z-index:100; background:#0a1420; box-shadow:0 1px 0 #1c2733;">
     <div id="header-inner" style="display:flex; align-items:center; justify-content:space-between; padding:20px 60px; max-width:1200px; margin:0 auto;">
-      <a href="index.html" style="display:flex; flex-direction:column; line-height:1.1; text-decoration:none;">
-        <span style="font-family:'Oswald',sans-serif; font-weight:700; font-size:20px; letter-spacing:0.5px; color:#f5f2ec;">MIKE SCHINDLER</span>
-        <span style="font-family:'Oswald',sans-serif; font-weight:500; font-size:11px; letter-spacing:1.5px; color:#d9a13f;">DECISION ARCHITECT</span>
+      <a href="/" style="display:flex; flex-direction:column; line-height:1.1; text-decoration:none;">
+        <span style="font-family:Oswald,sans-serif; font-weight:700; font-size:20px; letter-spacing:0.5px; color:#f5f2ec;">MIKE SCHINDLER</span>
+        <span style="font-family:Oswald,sans-serif; font-weight:500; font-size:11px; letter-spacing:1.5px; color:#d9a13f;">DECISION ARCHITECT</span>
       </a>
-      <nav style="display:flex; gap:32px; white-space:nowrap;" id="main-nav">
-        <a class="nav-link" href="index.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">HOME</a>
-        <a class="nav-link" href="about.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">ABOUT</a>
-        <a class="nav-link" href="what-i-do.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">WHAT I DO</a>
-        <a class="nav-link" href="programs.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">PROGRAMS</a>
-        <a class="nav-link" href="speaking.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">SPEAKING</a>
-        <a class="nav-link" href="resources.html" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">RESOURCES</a>
-        <a class="nav-connect" href="connect.html" style="font-size:13px;">LET'S CONNECT</a>
+      <nav style="display:flex; gap:32px; white-space:nowrap;" id="main-nav" aria-label="Primary">
+        <a class="nav-link" href="/" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">HOME</a>
+        <a class="nav-link" href="/about" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">ABOUT</a>
+        <a class="nav-link" href="/what-i-do" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">WHAT I DO</a>
+        <a class="nav-link" href="/programs" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">PROGRAMS</a>
+        <a class="nav-link" href="/speaking" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">SPEAKING</a>
+        <a class="nav-link" href="/resources" style="font-size:13px; font-weight:600; letter-spacing:0.5px;">RESOURCES</a>
+        <a class="nav-connect" href="/connect" style="font-size:13px;">LET'S CONNECT</a>
       </nav>
-      <a id="header-connect" href="connect.html" style="background:#d9a13f; color:#0a1420; font-size:13px; font-weight:700; letter-spacing:0.5px; padding:12px 22px; border-radius:3px; white-space:nowrap; text-decoration:none;">LET'S CONNECT</a>
-      <button id="menu-toggle" style="display:none; background:none; border:none; color:#fff; font-size:26px; cursor:pointer;">☰</button>
+      <a id="header-connect" href="/connect" style="background:#d9a13f; color:#0a1420; font-size:13px; font-weight:700; letter-spacing:0.5px; padding:12px 22px; border-radius:3px; white-space:nowrap; text-decoration:none;">LET'S CONNECT</a>
+      <button id="menu-toggle" style="display:none; background:none; border:none; color:#fff; font-size:22px; cursor:pointer; padding:11px 13px; line-height:1;" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">☰</button>
     </div>
   </header>
 
+  <main id="main-content">
+
   <!-- ============ HERO ============ -->
   <section style="position:relative; background:#0a1420; overflow:hidden;">
-    <div style="position:absolute; inset:0; background:url('assets/mike-portrait.png') center 15%/cover no-repeat; filter:blur(10px) brightness(0.22); transform:scale(1.1);"></div>
+    <div style="position:absolute; inset:0; background:url('assets/mike-portrait.png') center 15%/cover no-repeat; background:image-set(url('assets/mike-portrait.webp') type('image/webp'), url('assets/mike-portrait.png') type('image/png')) center 15%/cover no-repeat; filter:blur(10px) brightness(0.22); transform:scale(1.1);"></div>
     <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,20,32,0.88) 0%, rgba(10,20,32,0.94) 60%, #0a1420 100%);"></div>
     <div id="mb-hero-inner" class="reveal" style="position:relative; max-width:760px; margin:0 auto; text-align:center; padding:88px 60px 68px;">
 
       <div id="mb-hero-default">
-        <p style="font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:2px; color:#d9a13f; margin:0 0 16px;">A FREE MINI-BOOK FROM MIKE SCHINDLER</p>
+        <p style="font-family:Oswald,sans-serif; font-size:12px; font-weight:600; letter-spacing:2px; color:#d9a13f; margin:0 0 16px;">A FREE MINI-BOOK FROM MIKE SCHINDLER</p>
       </div>
       <div id="mb-hero-fromassessment" style="display:none;">
-        <p style="font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:2px; color:#d9a13f; margin:0 0 16px;">YOUR RESULTS ARE JUST THE BEGINNING</p>
+        <p style="font-family:Oswald,sans-serif; font-size:12px; font-weight:600; letter-spacing:2px; color:#d9a13f; margin:0 0 16px;">YOUR RESULTS ARE JUST THE BEGINNING</p>
         <p style="font-size:15px; line-height:1.7; color:#c3ccd3; margin:0 0 22px; max-width:520px; margin-left:auto; margin-right:auto;">Your assessment shows where you&rsquo;re clear&mdash;and where your next chapter may need more attention. I wrote a short guide for successful people navigating this exact question.</p>
       </div>
 
-      <h1 id="mb-hero-title" style="font-family:'Anton',sans-serif; font-weight:400; font-size:58px; line-height:1.05; color:#ffffff; margin:0 0 18px; letter-spacing:1px;">THE NEXT CHAPTER&trade;</h1>
+      <h1 id="mb-hero-title" style="font-family:Anton,sans-serif; font-weight:400; font-size:58px; line-height:1.05; color:#ffffff; margin:0 0 18px; letter-spacing:1px;">THE NEXT CHAPTER&trade;</h1>
       <p style="font-size:19px; line-height:1.5; font-weight:500; color:#e8ecef; margin:0 0 8px;">You&rsquo;ve built a successful life. Now comes a surprisingly difficult question:</p>
-      <p style="font-family:'Anton',sans-serif; font-size:24px; letter-spacing:0.5px; color:#d9a13f; margin:0 0 30px;">WHAT DO YOU WANT NEXT?</p>
+      <p style="font-family:Anton,sans-serif; font-size:24px; letter-spacing:0.5px; color:#d9a13f; margin:0 0 30px;">WHAT DO YOU WANT NEXT?</p>
 
       <div style="display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:14px;" id="mb-hero-actions">
-        <a class="btn-gold" href="assets/the-next-chapter-mini-book.pdf" download style="display:inline-block; background:#d9a13f; color:#0a1420; font-family:'Oswald',sans-serif; font-size:14px; font-weight:700; letter-spacing:0.5px; padding:17px 30px; border-radius:3px; text-decoration:none;">DOWNLOAD THE FREE MINI-BOOK &rarr;</a>
+        <a class="btn-gold" href="assets/the-next-chapter-mini-book.pdf" download style="display:inline-block; background:#d9a13f; color:#0a1420; font-family:Oswald,sans-serif; font-size:14px; font-weight:700; letter-spacing:0.5px; padding:17px 30px; border-radius:3px; text-decoration:none;">DOWNLOAD THE FREE MINI-BOOK &rarr;</a>
         <a class="btn-ghost" href="#chapter-01">START READING &darr;</a>
       </div>
       <p style="font-size:11px; letter-spacing:0.5px; color:#7c868f; margin:0 0 22px;">FREE &middot; ABOUT 15&ndash;20 MINUTES</p>
 
       <div style="width:48px; height:2px; background:#d9a13f; margin:26px auto 22px;"></div>
-      <p style="font-family:'Oswald',sans-serif; font-size:11px; font-weight:600; letter-spacing:1.2px; color:#8b95a0; margin:0;">A PRIVATE DECISION ARCHITECTURE&trade; ENGAGEMENT WITH MICHAEL SCHINDLER</p>
+      <p style="font-family:Oswald,sans-serif; font-size:11px; font-weight:600; letter-spacing:1.2px; color:#8b95a0; margin:0;">A PRIVATE DECISION ARCHITECTURE&trade; ENGAGEMENT WITH MICHAEL SCHINDLER</p>
     </div>
   </section>
 
@@ -368,63 +415,59 @@
           <p class="mb-path-label">I&rsquo;M READY.</p>
           <p class="mb-path-copy">You have something meaningful to work through and you&rsquo;re ready to begin.</p>
           <!-- PLACEHOLDER: replace href with the real payment/enrollment URL once it exists. -->
-          <a class="btn-gold mb-path-btn" href="connect.html?topic=Working%20together&amp;note=I%20just%20read%20The%20Next%20Chapter%20mini-book%20and%20I%27m%20ready%20to%20begin.#form" style="display:block; text-align:center; background:#d9a13f; color:#0a1420; font-family:'Oswald',sans-serif; font-size:14px; font-weight:700; letter-spacing:0.5px; padding:16px 20px; border-radius:3px; text-decoration:none;">BEGIN THE NEXT CHAPTER&trade; &rarr;</a>
-          <p class="mb-path-note">Enrollment link pending &mdash; this currently opens a message to Mike.</p>
+          <a class="btn-gold mb-path-btn" href="/connect?topic=Working%20together&amp;note=I%20just%20read%20The%20Next%20Chapter%20mini-book%20and%20I%27m%20ready%20to%20begin.#form" style="display:block; text-align:center; background:#d9a13f; color:#0a1420; font-family:Oswald,sans-serif; font-size:14px; font-weight:700; letter-spacing:0.5px; padding:16px 20px; border-radius:3px; text-decoration:none;">BEGIN THE NEXT CHAPTER&trade; &rarr;</a>
+          <p class="mb-path-note">Message Mike directly to begin.</p>
         </div>
         <div class="mb-path-card">
           <p class="mb-path-label">I HAVE A QUESTION.</p>
           <p class="mb-path-copy">There&rsquo;s something specific you want to understand before deciding.</p>
           <!-- PLACEHOLDER: replace href with Mike's real calendar link once it exists. -->
-          <a class="btn-ghost mb-path-btn" href="connect.html?topic=General%20question&amp;note=I%20just%20read%20The%20Next%20Chapter%20mini-book%20and%20I%20have%20a%20question%20before%20deciding.#form">TALK WITH MIKE &rarr;</a>
+          <a class="btn-ghost mb-path-btn" href="/connect?topic=General%20question&amp;note=I%20just%20read%20The%20Next%20Chapter%20mini-book%20and%20I%20have%20a%20question%20before%20deciding.#form">TALK WITH MIKE &rarr;</a>
           <p class="mb-path-note">A short conversation to see whether the work fits the question you&rsquo;re trying to solve.</p>
         </div>
       </div>
 
-      <!-- Third, lower-commitment next step (Sep 2026 client feedback,
-           question 8): the assessment → mini-book journey should end
-           somewhere even for readers not ready for either path above.
-           Human 10.0 is currently free via Skool — see js/script.js for the
-           SKOOL_URL configuration point. -->
-      <div class="mb-bridge" style="margin-top:24px;">
+            <div class="mb-bridge" style="margin-top:24px;">
         <p class="mb-bridge-copy">Not ready for a conversation yet, but want somewhere to start? Human 10.0&trade; is currently free to join.</p>
-        <a data-cta="skool" class="mb-bridge-link" href="connect.html?topic=Human%2010.0%20program&amp;note=I%20just%20read%20The%20Next%20Chapter%20mini-book%20and%20I%27d%20like%20to%20join%20the%20free%20Human%2010.0%20Skool%20community.#form">JOIN FREE ON SKOOL &rarr;</a>
+        <a data-cta="skool" class="mb-bridge-link" href="/connect?topic=Human%2010.0%20program&amp;note=I%20just%20read%20The%20Next%20Chapter%20mini-book%20and%20I%27d%20like%20to%20join%20the%20free%20Human%2010.0%20Skool%20community.#form">JOIN FREE ON SKOOL &rarr;</a>
       </div>
 
       <div style="margin-top:64px; padding-top:36px; border-top:1px solid #1c2733;">
-        <p style="font-family:'Oswald',sans-serif; font-size:15px; font-weight:700; letter-spacing:0.5px; color:#ffffff; margin:0 0 6px;">MICHAEL SCHINDLER</p>
+        <p style="font-family:Oswald,sans-serif; font-size:15px; font-weight:700; letter-spacing:0.5px; color:#ffffff; margin:0 0 6px;">MICHAEL SCHINDLER</p>
         <p style="font-size:12.5px; line-height:1.6; color:#8b95a0; margin:0 0 14px;">Decision Architect &middot; U.S. Navy Veteran &middot; 3&times; Author &middot; Co-Creator, VUCA MAX&trade; &middot; Creator, Human 10.0&trade;</p>
-        <p style="font-family:'Oswald',sans-serif; font-size:11px; font-weight:600; letter-spacing:1px; color:#d9a13f; margin:0;">Better decisions. Stronger humans. What&rsquo;s next?</p>
+        <p style="font-family:Oswald,sans-serif; font-size:11px; font-weight:600; letter-spacing:1px; color:#d9a13f; margin:0;">Better decisions. Stronger humans. What&rsquo;s next?</p>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
+  </main>
+
   <footer id="contact" style="background:#0a1420; padding:34px 60px; border-top:1px solid #1c2733;">
     <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; padding-bottom:20px; border-bottom:1px solid #1c2733;">
       <div style="display:flex; align-items:center; gap:12px;">
         <div style="width:38px; height:38px; border-radius:6px; border:1.5px solid #d9a13f; display:flex; align-items:center; justify-content:center;">
-          <span style="font-family:'Oswald',sans-serif; font-size:13px; font-weight:700; color:#d9a13f;">MS</span>
+          <span style="font-family:Oswald,sans-serif; font-size:13px; font-weight:700; color:#d9a13f;">MS</span>
         </div>
         <div style="line-height:1.15;">
-          <div style="font-family:'Oswald',sans-serif; font-size:14px; font-weight:700; color:#f5f2ec;">MIKE SCHINDLER</div>
-          <div style="font-family:'Oswald',sans-serif; font-size:10px; font-weight:500; letter-spacing:1px; color:#d9a13f;">DECISION ARCHITECT</div>
+          <div style="font-family:Oswald,sans-serif; font-size:14px; font-weight:700; color:#f5f2ec;">MIKE SCHINDLER</div>
+          <div style="font-family:Oswald,sans-serif; font-size:10px; font-weight:500; letter-spacing:1px; color:#d9a13f;">DECISION ARCHITECT</div>
         </div>
       </div>
-      <nav style="display:flex; gap:22px; flex-wrap:wrap;">
-        <a class="nav-link" href="about.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">ABOUT MIKE</a>
-        <a class="nav-link" href="programs.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">HUMAN 10.0</a>
-        <a class="nav-link" href="what-i-do.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">WHAT I DO</a>
-        <a class="nav-link" href="speaking.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">SPEAKING</a>
-        <a class="nav-link" href="resources.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">RESOURCES</a>
-        <a class="nav-link" href="connect.html" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">CONTACT</a>
+      <nav style="display:flex; gap:22px; flex-wrap:wrap;" aria-label="Footer">
+        <a class="nav-link" href="/" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">HOME</a>
+        <a class="nav-link" href="/about" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">ABOUT</a>
+        <a class="nav-link" href="/what-i-do" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">WHAT I DO</a>
+        <a class="nav-link" href="/programs" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">PROGRAMS</a>
+        <a class="nav-link" href="/speaking" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">SPEAKING</a>
+        <a class="nav-link" href="/resources" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">RESOURCES</a>
+        <a class="nav-link" href="/mini-book" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">MINI-BOOK</a>
+        <a class="nav-link" href="/connect" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">LET&rsquo;S CONNECT</a>
+        <a class="nav-link" href="/privacy" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">PRIVACY</a>
+        <a class="nav-link" href="/terms" style="font-size:12px; font-weight:600; letter-spacing:0.3px;">TERMS</a>
       </nav>
-      <div style="display:flex; gap:10px;">
-        <a href="#" style="width:30px; height:30px; border-radius:50%; background:#0d1926; display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#d9a13f"><path d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1.02 4.6 1.02 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zM1.5 8.5h3v14h-3v-14zm6.5 0h2.9v1.9h.04c.4-.8 1.4-1.9 3-1.9 3.2 0 3.8 2.1 3.8 4.8v7.2h-3v-6.4c0-1.5 0-3.5-2.1-3.5s-2.4 1.7-2.4 3.4v6.5h-3v-14z"/></svg></a>
-        <a href="#" style="width:30px; height:30px; border-radius:50%; background:#0d1926; display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#d9a13f"><path d="M22 8.4s-.2-1.6-.8-2.3c-.8-.9-1.7-.9-2.1-1C16.4 5 12 5 12 5s-4.4 0-7.1.1c-.4 0-1.3.1-2.1 1-.6.7-.8 2.3-.8 2.3S1.8 10.3 1.8 12.1v1.7c0 1.8.2 3.7.2 3.7s.2 1.6.8 2.3c.8.9 1.9.9 2.4 1 1.7.2 7.3.2 7.3.2s4.4 0 7.1-.1c.4 0 1.3-.1 2.1-1 .6-.7.8-2.3.8-2.3s.2-1.9.2-3.7v-1.7c0-1.8-.2-3.7-.2-3.7zM9.9 15.5V9.4l5.4 3-5.4 3.1z"/></svg></a>
-        <a href="#" style="width:30px; height:30px; border-radius:50%; background:#0d1926; display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d9a13f" stroke-width="1.6"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 7l10 7 10-7"/></svg></a>
-      </div>
     </div>
-    <p style="text-align:center; font-size:12px; color:#6b7680; margin:18px 0 0;">&copy; 2026 Michael Schindler. All Rights Reserved.</p>
+    <p style="text-align:center; font-size:12px; color:#8b95a0; margin:18px 0 0;">&copy; 2026 Michael Schindler. All Rights Reserved.</p>
   </footer>
 
 </div>
