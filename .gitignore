@@ -1,0 +1,40 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / temp files
+*.swp
+*~
+*.bak
+*.tmp
+
+# Dependencies (only relevant if npm install is ever run for local preview tooling)
+node_modules/
+
+# Local tooling config (not part of the deployed site)
+/.claude/
+
+# Legacy backup / prototype material predating the public/ restructure —
+# not part of the live site, kept out of version control rather than deleted
+# so nothing is lost; safe to remove from disk once confirmed unneeded.
+/_archive/
+/_backup-pre-revision/
+/_backup-r4/
+/_backup-r5/
+/_backup-r6/
+/uploads/
+/*.dc.html
+/image-slot.js
+/support.js
+/HTMLCSSJS Prototype Build.zip
+/MINI-BOOK-INTEGRATION-README.txt
+/crop_*.png
+/type-h2.png
+/type-hero.png
+/.thumbnail
+
+# Internal audit-report deliverables — documentation, not site content
+/LIVE-AUDIT-REPORT-*.md
+/LIVE-AUDIT-REPORT-*.pdf
+/LOCAL-AUDIT-REPORT-*.md

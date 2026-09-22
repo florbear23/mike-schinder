@@ -1,0 +1,9 @@
+{
+  "name": "mikeschindler-com",
+  "version": "1.0.0",
+  "private": true,
+  "description": "mikeschindler.com — static HTML/CSS/JS site deployed via Netlify. No build step: netlify.toml sets the publish directory to public/.",
+  "scripts": {
+    "start": "npx serve public -l 5050"
+  }
+}
