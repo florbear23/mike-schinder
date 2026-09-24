@@ -1,26 +1,18 @@
 /* ============================================================
    ASSESSMENT URL — SINGLE CONFIGURATION POINT
-   The real Decision Clarity Assessment is being built in GoHighLevel. The
-   client's preferred branded URL is assessment.michaelschindler.com, but
-   that URL is NOT live/published yet, so it is deliberately not set below —
-   inventing it would silently send real visitors to a domain that may not
-   resolve or may not point at the finished assessment.
+   The real Decision Clarity Assessment is live in GoHighLevel at the
+   confirmed URL below (set Sep 2026).
 
    EVERY assessment CTA on the site (22 of them, across index/about/connect/
-   programs/resources/what-i-do.html) carries data-cta="assessment" and a
-   safe existing fallback href as a no-JS fallback: most link to the
-   assessment preview panel on the homepage (/#assessment); the two CTAs
-   that live inside that panel itself (index.html and programs.html) instead
-   fall back to the contact form, since scrolling to the section they're
-   already in would be a dead end. Once GHL publishes the real URL:
+   programs/resources/what-i-do.html) carries data-cta="assessment" and
+   updates to this URL automatically on page load. The static hrefs already
+   in each page's HTML (mostly /#assessment, plus a /connect fallback for
+   the two CTAs that live inside the assessment panel itself) remain as a
+   no-JS fallback only — no other file needs to change.
 
-     1. set ASSESSMENT_URL below to that exact URL
-     2. every one of those 22 links updates automatically on page load
-
-   No other file needs to change. Until that URL exists, this script is a
-   deliberate no-op (ASSESSMENT_URL is null) and every CTA keeps working via
-   its existing fallback href. */
-var ASSESSMENT_URL = null; // e.g. 'https://assessment.michaelschindler.com'
+   If this URL is ever retired, set ASSESSMENT_URL back to null and every
+   CTA reverts to its existing fallback href automatically. */
+var ASSESSMENT_URL = 'https://assessment.mikeschindler.com/assessment';
 
 document.addEventListener('DOMContentLoaded', function () {
   if (ASSESSMENT_URL) {
@@ -35,25 +27,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* ============================================================
    SKOOL URL — SINGLE CONFIGURATION POINT
-   Human 10.0 is being held free in the Skool community while the paid
-   experience is on hold (client direction, Sep 2026). No Skool group URL has
-   been supplied yet, so it is deliberately not set below — inventing one
-   would silently send real visitors to a group that may not exist or may not
-   be the right one.
+   Human 10.0's free Skool community join link — confirmed URL below
+   (set Sep 2026).
 
-   Every "join Human 10.0" CTA on the site carries data-cta="skool" and a
-   safe existing fallback href (a pre-filled connect.html message) so the
-   link always does something real. Once the client supplies the Skool
-   group's join URL:
+   Every "join Human 10.0" CTA on the site carries data-cta="skool" and
+   updates to this URL automatically on page load (opens in a new tab,
+   since Skool is an external destination). The static fallback hrefs
+   already in each page's HTML (a pre-filled connect.html message) remain
+   as a no-JS fallback only — no other file needs to change.
 
-     1. set SKOOL_URL below to that exact URL
-     2. every CTA carrying data-cta="skool" updates automatically on page load
-        (opens in a new tab, since Skool is an external destination)
-
-   No other file needs to change. Until that URL exists, this script is a
-   deliberate no-op (SKOOL_URL is null) and every CTA keeps working via its
-   existing fallback href. */
-var SKOOL_URL = null; // e.g. 'https://www.skool.com/human-10-0'
+   If this URL is ever retired, set SKOOL_URL back to null and every CTA
+   reverts to its existing fallback href automatically. */
+var SKOOL_URL = 'https://www.skool.com/stuck-to-unstuck/about?ref=21743062f3b44a1e9fe764fe8d482a5d';
 
 document.addEventListener('DOMContentLoaded', function () {
   if (SKOOL_URL) {
@@ -94,12 +79,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-/* Dan Mullins video: the custom cover hides on play and returns when it ends,
-   so the poster (not a black frame) is what people see either side of playback. */
+/* Homepage Timothy Krambs video player: the custom cover hides on play and
+   returns when it ends, so the poster (not a black frame) is what people
+   see either side of playback. */
 document.addEventListener('DOMContentLoaded', function () {
-  var frame = document.getElementById('dan-frame');
-  var video = document.getElementById('dan-video');
-  var play  = document.getElementById('dan-play');
+  var frame = document.getElementById('timothy-frame');
+  var video = document.getElementById('timothy-video');
+  var play  = document.getElementById('timothy-play');
   if (!frame || !video || !play) return;
   play.addEventListener('click', function () {
     frame.classList.add('is-playing');

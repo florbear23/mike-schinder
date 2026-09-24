@@ -27,10 +27,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
-  .reveal { opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
-  .reveal.in { opacity:1; transform:none; }
-  .btn-gold { transition:background .2s ease; }
-  .btn-gold:hover { background:#e6b562 !important; color:#0a1420; }
   .path-card { transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
   .path-card:hover { transform:translateY(-4px); border-color:#d9a13f !important; box-shadow:0 14px 34px rgba(10,20,32,0.14); }
   .form-field { width:100%; box-sizing:border-box; background:#0d1926; border:1px solid #2a3846; border-radius:3px; color:#f5f2ec; font-family:Inter,sans-serif; font-size:14px; padding:15px 16px; transition:border-color .2s ease; }
@@ -108,7 +104,7 @@
         <a class="nav-connect" href="/connect" style="font-size:13px;">LET'S CONNECT</a>
       </nav>
       <a id="header-connect" href="/connect" style="background:#d9a13f; color:#0a1420; font-size:13px; font-weight:700; letter-spacing:0.5px; padding:12px 22px; border-radius:3px; white-space:nowrap; text-decoration:none;">LET'S CONNECT</a>
-      <button id="menu-toggle" style="display:none; background:none; border:none; color:#fff; font-size:22px; cursor:pointer; padding:11px 13px; line-height:1;" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <button id="menu-toggle" type="button" style="display:none; background:none; border:none; color:#fff; font-size:22px; cursor:pointer; padding:11px 13px; line-height:1;" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">☰</button>
     </div>
   </header>
 
@@ -187,7 +183,7 @@
             </div>
           </div>
           <div>
-            <label class="form-label" for="cf-org">COMPANY / ORGANIZATION <span style="color:#5c6773; font-weight:500;">(OPTIONAL)</span></label>
+            <label class="form-label" for="cf-org">COMPANY / ORGANIZATION <span style="color:#7f8b98; font-weight:500;">(OPTIONAL)</span></label>
             <input class="form-field" id="cf-org" name="organization" type="text" autocomplete="organization" placeholder="Where you work">
           </div>
           <div>
@@ -256,7 +252,7 @@
         </div>
         <div class="acc-item">
           <button class="acc-btn" type="button" aria-expanded="false"><span style="font-family:Oswald,sans-serif; font-size:15px; font-weight:700; color:#16232f; letter-spacing:0.4px;">WHERE SHOULD I START IF I'M NOT SURE?</span><span class="acc-icon">+</span></button>
-          <div class="acc-panel"><p style="font-size:14px; line-height:1.8; color:#5c6773; margin:0; padding:0 4px 22px;">Take a look at the <a data-cta="assessment" href="/#assessment" style="color:#7a5c1f;">Decision Clarity Assessment</a> preview — about 3 minutes once it launches, 100% private. It's the best snapshot of where to begin.</p></div>
+          <div class="acc-panel"><p style="font-size:14px; line-height:1.8; color:#5c6773; margin:0; padding:0 4px 22px;">Take a look at the <a data-cta="assessment" href="/#assessment" style="color:#7a5c1f;">Decision Clarity Assessment</a> preview — about 3 minutes, 100% private. It's the best snapshot of where to begin.</p></div>
         </div>
       </div>
     </div>

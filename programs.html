@@ -27,10 +27,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
-  .reveal { opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
-  .reveal.in { opacity:1; transform:none; }
-  .btn-gold { transition:background .2s ease; }
-  .btn-gold:hover { background:#e6b562 !important; color:#0a1420; }
   .prog-card { transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
   .prog-card:hover { transform:translateY(-4px); box-shadow:0 14px 34px rgba(10,20,32,0.14); border-color:#d9a13f !important; }
   .acc-item { border-top:1px solid #1c2733; }
@@ -107,7 +103,7 @@
         <a class="nav-connect" href="/connect" style="font-size:13px;">LET'S CONNECT</a>
       </nav>
       <a id="header-connect" href="/connect" style="background:#d9a13f; color:#0a1420; font-size:13px; font-weight:700; letter-spacing:0.5px; padding:12px 22px; border-radius:3px; white-space:nowrap; text-decoration:none;">LET'S CONNECT</a>
-      <button id="menu-toggle" style="display:none; background:none; border:none; color:#fff; font-size:22px; cursor:pointer; padding:11px 13px; line-height:1;" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <button id="menu-toggle" type="button" style="display:none; background:none; border:none; color:#fff; font-size:22px; cursor:pointer; padding:11px 13px; line-height:1;" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">☰</button>
     </div>
   </header>
 
@@ -219,8 +215,8 @@
           <span class="seq-chip">DIRECTION</span><span class="seq-arrow">&rarr;</span>
           <span class="seq-chip">ACTION</span>
         </div>
-                <a data-cta="assessment" class="btn-gold" href="/connect?topic=General%20question&amp;note=I%27d%20like%20to%20know%20when%20the%20Decision%20Clarity%20Assessment%20launches.#form" style="display:inline-block; background:#d9a13f; color:#0a1420; font-family:Oswald,sans-serif; font-size:14px; font-weight:700; letter-spacing:0.5px; padding:18px 34px; border-radius:3px; margin-bottom:18px; text-decoration:none;">GET NOTIFIED WHEN IT LAUNCHES &rarr;</a>
-        <p style="font-size:11px; letter-spacing:0.5px; color:#7c868f; margin:0;">100% PRIVATE&nbsp;&nbsp;&bull;&nbsp;&nbsp;NO CREDIT CARD&nbsp;&nbsp;&bull;&nbsp;&nbsp;LAUNCHING SOON</p>
+                <a data-cta="assessment" class="btn-gold" href="https://assessment.mikeschindler.com/assessment" style="display:inline-block; background:#d9a13f; color:#0a1420; font-family:Oswald,sans-serif; font-size:14px; font-weight:700; letter-spacing:0.5px; padding:18px 34px; border-radius:3px; margin-bottom:18px; text-decoration:none;">TAKE THE ASSESSMENT &rarr;</a>
+        <p style="font-size:11px; letter-spacing:0.5px; color:#7c868f; margin:0;">100% PRIVATE&nbsp;&nbsp;&bull;&nbsp;&nbsp;NO CREDIT CARD&nbsp;&nbsp;&bull;&nbsp;&nbsp;TAKES 3 MINUTES</p>
       </div>
     </div>
   </section>
@@ -408,7 +404,7 @@
         </div>
         <div class="acc-item" style="border-bottom:1px solid #ddd5c8;">
           <button class="acc-btn" aria-expanded="false" style="width:100%; background:none; border:0; cursor:pointer; text-align:left; display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 0; font-family:Oswald,sans-serif; font-size:14.5px; font-weight:700; letter-spacing:0.4px; color:#16232f;">WHAT HAPPENS AFTER I TAKE THE ASSESSMENT?<span style="color:#7a5c1f; font-size:18px;">+</span></button>
-          <div class="acc-panel"><p style="font-size:14.5px; line-height:1.75; color:#5c6773; margin:0 0 22px; max-width:720px;">You get a personalized snapshot of where you are across clarity, decision, direction and action &mdash; so you understand your situation and what to think about next. No credit card, instant results.</p></div>
+          <div class="acc-panel"><p style="font-size:14.5px; line-height:1.75; color:#5c6773; margin:0 0 22px; max-width:720px;">Once you complete it, you&rsquo;ll get a personalized snapshot of where you are across clarity, decision, direction and action &mdash; so you understand your situation and what to think about next. No credit card required.</p></div>
         </div>
         <div class="acc-item" style="border-bottom:1px solid #ddd5c8;">
           <button class="acc-btn" aria-expanded="false" style="width:100%; background:none; border:0; cursor:pointer; text-align:left; display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 0; font-family:Oswald,sans-serif; font-size:14.5px; font-weight:700; letter-spacing:0.4px; color:#16232f;">IS THE NEXT CHAPTER COACHING?<span style="color:#7a5c1f; font-size:18px;">+</span></button>

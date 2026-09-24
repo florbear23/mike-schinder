@@ -27,10 +27,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
-  .reveal { opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
-  .reveal.in { opacity:1; transform:none; }
-  .btn-gold { transition:background .2s ease; }
-  .btn-gold:hover { background:#e6b562 !important; color:#0a1420; }
   .offer-item { transition:background .25s ease, border-color .25s ease; }
   .offer-item:hover { background:#101e2c; border-color:#2a3846 !important; }
   .step-card { transition:transform .25s ease, border-color .25s ease; }
@@ -101,7 +97,7 @@
         <a class="nav-connect" href="/connect" style="font-size:13px;">LET'S CONNECT</a>
       </nav>
       <a id="header-connect" href="/connect" style="background:#d9a13f; color:#0a1420; font-size:13px; font-weight:700; letter-spacing:0.5px; padding:12px 22px; border-radius:3px; white-space:nowrap; text-decoration:none;">LET'S CONNECT</a>
-      <button id="menu-toggle" style="display:none; background:none; border:none; color:#fff; font-size:22px; cursor:pointer; padding:11px 13px; line-height:1;" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <button id="menu-toggle" type="button" style="display:none; background:none; border:none; color:#fff; font-size:22px; cursor:pointer; padding:11px 13px; line-height:1;" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">☰</button>
     </div>
   </header>
 
@@ -207,7 +203,7 @@
           <li style="display:flex; gap:12px; align-items:baseline; font-size:15px; color:#e8ecef;"><span style="color:#d9a13f; font-weight:700;">&mdash;</span>First meaningful moves underway</li>
         </ul>
         <p style="font-size:12.5px; line-height:1.6; color:#8b95a0; margin:0 0 26px; padding-top:16px; border-top:1px solid #1c2733;">Built on Mike&rsquo;s <strong style="color:#d9a13f; font-weight:600;">Private Decision Architecture</strong> &mdash; the methodology underneath the engagement.</p>
-        <a class="btn-gold" href="#cta" style="display:inline-block; background:#d9a13f; color:#0a1420; font-family:Oswald,sans-serif; font-size:14px; font-weight:700; letter-spacing:0.5px; padding:17px 32px; border-radius:3px; text-decoration:none;">EXPLORE THE NEXT CHAPTER →</a>
+        <a class="btn-gold" href="/programs#next-chapter" style="display:inline-block; background:#d9a13f; color:#0a1420; font-family:Oswald,sans-serif; font-size:14px; font-weight:700; letter-spacing:0.5px; padding:17px 32px; border-radius:3px; text-decoration:none;">EXPLORE THE NEXT CHAPTER →</a>
       </div>
     </div>
   </section>
@@ -228,7 +224,7 @@
             <source src="assets/video/timothy-krambs.mov">
             Your browser cannot play this video.
           </video>
-          <button id="tim-play" type="button" aria-label="Play Timothy Krambs's testimonial">
+          <button id="tim-play" type="button">
             <span class="play-btn">
               <svg width="22" height="24" viewBox="0 0 24 26" fill="#d9a13f" aria-hidden="true"><path d="M3 1.5l18 11.5L3 24.5z"/></svg>
             </span>
@@ -242,7 +238,7 @@
         <div><span class="arc-k">WHAT CHANGED</span><span class="arc-v arc-v-muted">In his own words &mdash; press play</span></div>
       </div>
       <p class="reveal" style="font-family:Oswald,sans-serif; font-size:17px; font-weight:700; letter-spacing:0.5px; color:#ffffff; margin:26px 0 0; text-align:center;">TIMOTHY KRAMBS</p>
-      <!-- EDITABLE: role line — intentionally blank until the client supplies it. -->
+      <p class="reveal" style="font-family:Oswald,sans-serif; font-size:13px; font-weight:500; letter-spacing:0.3px; color:#9aa4ad; margin:6px 0 0; text-align:center;">Retired Army Officer &middot; Real Estate Investor</p>
     </div>
   </section>
 

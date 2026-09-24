@@ -28,18 +28,20 @@
 <link rel="stylesheet" href="css/style.css">
 <style>
   /* About-page-only rules */
-  .reveal { opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
-  .reveal.in { opacity:1; transform:none; }
   .value-card { transition:transform .25s ease, box-shadow .25s ease; }
   .value-card:hover { transform:translateY(-4px); box-shadow:0 10px 28px rgba(10,20,32,0.12); }
-  .btn-gold { transition:background .2s ease, transform .2s ease; }
-  .btn-gold:hover { background:#e6b562 !important; color:#0a1420; }
   @media (max-width: 900px) {
     #about-hero-grid { grid-template-columns:1fr !important; }
     #about-intro-grid { grid-template-columns:1fr !important; gap:36px !important; }
     #values-grid { grid-template-columns:repeat(2,1fr) !important; }
     #process-grid { grid-template-columns:repeat(2,1fr) !important; }
-    #about-hero-card { position:static !important; margin-top:-40px; margin-left:20px; }
+    /* #about-hero-card intentionally keeps its default position:absolute (left:-34px;
+       bottom:28px) at every width. The portrait <img> and its gradient overlay in the
+       same .reveal column are position:absolute, so if this badge is switched to
+       position:static it becomes the column's only in-flow box and paints BELOW those
+       positioned siblings per CSS stacking order — visually this hid "LEADERS IMPACTED"
+       behind the portrait on mobile. Fixed 2026-09-25; do not re-add a static override
+       here without re-testing at 375/390/768px. */
   }
   @media (max-width: 620px) {
     #values-grid { grid-template-columns:1fr !important; }
@@ -97,7 +99,7 @@
         <a class="nav-connect" href="/connect" style="font-size:13px;">LET'S CONNECT</a>
       </nav>
       <a id="header-connect" href="/connect" style="background:#d9a13f; color:#0a1420; font-size:13px; font-weight:700; letter-spacing:0.5px; padding:12px 22px; border-radius:3px; white-space:nowrap; text-decoration:none;">LET'S CONNECT</a>
-      <button id="menu-toggle" style="display:none; background:none; border:none; color:#fff; font-size:22px; cursor:pointer; padding:11px 13px; line-height:1;" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <button id="menu-toggle" type="button" style="display:none; background:none; border:none; color:#fff; font-size:22px; cursor:pointer; padding:11px 13px; line-height:1;" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">☰</button>
     </div>
   </header>
 

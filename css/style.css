@@ -72,8 +72,17 @@ body { margin:0; background:#0a1420; }
    cream #f3efe9 · ink #16232f · body #5c6773 / #aab3ba
    ============================================================ */
 
-.btn-gold { transition:background .2s ease; }
+.btn-gold { transition:background .2s ease, transform .2s ease; }
 .btn-gold:hover { background:#e6b562 !important; color:#0a1420 !important; }
+
+/* Scroll-triggered fade/slide-in, shared by every page that opts an element
+   in via class="reveal" (About, Connect, Programs, Resources, Speaking,
+   What I Do, Mini-Book). Each page's own <noscript> fallback — which forces
+   .reveal fully visible when JavaScript is unavailable — must stay inline
+   per page, since a <noscript> block only has effect inside the HTML
+   document that declares it. */
+.reveal { opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.in { opacity:1; transform:none; }
 
 .btn-ghost {
   display:inline-block; font-family:'Oswald',sans-serif; font-size:14px; font-weight:700;
@@ -92,7 +101,7 @@ body { margin:0; background:#0a1420; }
 }
 .rec-row:hover { background:#ece6dc; padding-left:20px; color:#16232f; }
 .rec-num {
-  font-family:'Anton',sans-serif; font-size:34px; line-height:1; color:#c9bda6;
+  font-family:'Anton',sans-serif; font-size:34px; line-height:1; color:#96826a;
   letter-spacing:1px; transition:color .25s ease;
 }
 .rec-row:hover .rec-num { color:#d9a13f; }
@@ -110,7 +119,7 @@ body { margin:0; background:#0a1420; }
   display:block; font-size:15px; line-height:1.6; color:#5c6773; margin-top:6px;
 }
 .rec-arrow {
-  font-family:'Oswald',sans-serif; font-size:18px; color:#d9a13f; text-align:right;
+  font-family:'Oswald',sans-serif; font-size:18px; color:#7a5c1f; text-align:right;
   opacity:0; transform:translateX(-8px); transition:opacity .25s ease, transform .25s ease;
 }
 .rec-row:hover .rec-arrow { opacity:1; transform:translateX(0); }
@@ -132,7 +141,7 @@ body { margin:0; background:#0a1420; }
 .fw-cell:not(:first-child) { padding-left:26px; }
 .fw-step {
   display:block; font-family:'Oswald',sans-serif; font-size:11px; font-weight:700;
-  letter-spacing:1.5px; color:#d9a13f; margin-bottom:12px;
+  letter-spacing:1.5px; color:#7a5c1f; margin-bottom:12px;
 }
 .fw-title {
   font-family:'Oswald',sans-serif; font-size:14.5px; font-weight:700; letter-spacing:0.4px;
@@ -140,8 +149,8 @@ body { margin:0; background:#0a1420; }
 }
 .fw-copy { font-size:13.5px; line-height:1.65; color:#5c6773; margin:0; }
 
-/* ---- 6 · TRANSFORMATION PROOF (DAN MULLINS) ---- */
-/* Source video is 124x224 portrait (Dan recorded it on a phone). Rather than
+/* ---- 6 · TRANSFORMATION PROOF (TIMOTHY KRAMBS) ---- */
+/* Source video is 124x224 portrait (recorded on a phone). Rather than
    drop a narrow player into a wide row and leave a void, the panel is sized BY
    the video: it bleeds to the panel's top, bottom and left edges, so its tall
    format is what sets the section's height. The portrait shape becomes the
@@ -154,29 +163,29 @@ body { margin:0; background:#0a1420; }
   overflow:hidden; box-shadow:0 26px 60px rgba(0,0,0,0.38);
 }
 #dan-stage { margin:0; align-self:stretch; display:flex; }
-#dan-frame {
+#timothy-frame {
   position:relative; width:100%; aspect-ratio:124/224;
   overflow:hidden; background:#0a1420;
   border-right:1px solid #1c2733;
 }
-#dan-video { display:block; width:100%; height:100%; object-fit:cover; background:#0a1420; }
+#timothy-video { display:block; width:100%; height:100%; object-fit:cover; background:#0a1420; }
 #dan-copy { padding:44px 52px; }
 /* custom cover sits over the poster until play; then it gets out of the way */
-#dan-play {
+#timothy-play {
   position:absolute; inset:0; display:flex; flex-direction:column;
   align-items:center; justify-content:center; gap:14px;
   border:0; cursor:pointer; padding:0;
   background:linear-gradient(180deg, rgba(10,20,32,0.32) 0%, rgba(10,20,32,0.78) 100%);
   transition:opacity .25s ease;
 }
-#dan-frame.is-playing #dan-play { opacity:0; pointer-events:none; }
+#timothy-frame.is-playing #timothy-play { opacity:0; pointer-events:none; }
 .play-btn {
   width:64px; height:64px; border-radius:50%; border:2px solid #d9a13f;
   display:flex; align-items:center; justify-content:center;
   background:rgba(10,20,32,0.55); padding-left:4px;
   transition:background .25s ease, transform .25s ease;
 }
-#dan-play:hover .play-btn { background:rgba(217,161,63,0.16); transform:scale(1.06); }
+#timothy-play:hover .play-btn { background:rgba(217,161,63,0.16); transform:scale(1.06); }
 .dan-video-label {
   font-family:'Oswald',sans-serif; font-size:10.5px; font-weight:600;
   letter-spacing:1.5px; color:#c3ccd3;
@@ -216,7 +225,7 @@ body { margin:0; background:#0a1420; }
   font-family:'Oswald',sans-serif; font-size:11px; font-weight:600;
   letter-spacing:1.5px; margin:0;
 }
-.offer-kicker-light { color:#9c9484; margin-bottom:16px; }
+.offer-kicker-light { color:#726a56; margin-bottom:16px; }
 
 /* entry point — deliberately understated */
 .offer-secondary {
@@ -303,7 +312,7 @@ body { margin:0; background:#0a1420; }
 .bp-line:last-child { border-bottom:none; }
 .bp-line-num {
   font-family:'Oswald',sans-serif; font-size:11px; font-weight:700;
-  letter-spacing:1px; color:#b09154;
+  letter-spacing:1px; color:#7d6432;
 }
 .bp-line-label {
   font-family:'Oswald',sans-serif; font-size:12.5px; font-weight:700;
@@ -492,7 +501,7 @@ img[src*="detail-"], img[src*="card-"] {
      padding returns around it so it never spans the full viewport width */
   #proof-grid { grid-template-columns:1fr !important; max-width:520px; }
   #dan-stage { justify-content:center; padding:34px 24px 0; }
-  #dan-frame {
+  #timothy-frame {
     width:232px; border-right:0; border:1px solid #1c2733; border-radius:12px;
   }
   #dan-copy { padding:30px 34px 36px; text-align:left; }
@@ -500,7 +509,7 @@ img[src*="detail-"], img[src*="card-"] {
 @media (max-width: 620px) {
   #proof-grid { max-width:none; }
   #dan-stage { padding:26px 20px 0; }
-  #dan-frame { width:206px; }
+  #timothy-frame { width:206px; }
   #dan-copy { padding:26px 22px 30px; }
   #dan-arc li { padding-left:22px; }
   .arc-v { font-size:16px; }
@@ -548,7 +557,7 @@ img[src*="detail-"], img[src*="card-"] {
 .ba-arrow { font-family:'Oswald',sans-serif; font-size:16px; color:#d9a13f; text-align:center; }
 .ba-to { font-size:17px; line-height:1.45; font-weight:600; color:#16232f; }
 .ba-list.on-dark li { border-bottom-color:#1c2733; }
-.ba-list.on-dark .ba-from { color:#6b7680; text-decoration-color:#3a4a5a; }
+.ba-list.on-dark .ba-from { color:#7c8794; text-decoration-color:#3a4a5a; }
 .ba-list.on-dark .ba-to { color:#ffffff; }
 
 /* ---- PATH / OFFER CARDS (Programs, What I Do) --------------- */
@@ -709,7 +718,7 @@ img[src*="detail-"], img[src*="card-"] {
 }
 .spk-meta-k {
   display:block; font-family:'Oswald',sans-serif; font-size:10px; font-weight:700;
-  letter-spacing:1.5px; color:#9c9484; margin-bottom:7px;
+  letter-spacing:1.5px; color:#726a56; margin-bottom:7px;
 }
 .spk-meta-v { display:block; font-size:13.5px; line-height:1.6; color:#16232f; }
 .spk-meta-list { list-style:none; margin:0; padding:0; }
@@ -754,7 +763,7 @@ img[src*="detail-"], img[src*="card-"] {
   display:flex; align-items:center; justify-content:center; height:64px; min-width:120px;
   padding:0 18px; border:1px dashed #cfc4b2; border-radius:6px; background:#efe9e0;
   font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; letter-spacing:0.3px;
-  color:#8a8579; text-align:center;
+  color:#6b6355; text-align:center;
 }
 .logo-img { height:64px; width:auto; max-width:180px; object-fit:contain; }
 @media (max-width:620px){ .logo-slot { height:56px; min-width:100px; font-size:11px; } .logo-img { height:52px; } }
