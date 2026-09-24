@@ -12,7 +12,7 @@
 
    If this URL is ever retired, set ASSESSMENT_URL back to null and every
    CTA reverts to its existing fallback href automatically. */
-var ASSESSMENT_URL = 'https://assessment.mikeschindler.com/assessment';
+var ASSESSMENT_URL = 'https://michaelschindler.com/assessment';
 
 document.addEventListener('DOMContentLoaded', function () {
   if (ASSESSMENT_URL) {

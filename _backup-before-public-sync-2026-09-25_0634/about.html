@@ -35,13 +35,7 @@
     #about-intro-grid { grid-template-columns:1fr !important; gap:36px !important; }
     #values-grid { grid-template-columns:repeat(2,1fr) !important; }
     #process-grid { grid-template-columns:repeat(2,1fr) !important; }
-    /* #about-hero-card intentionally keeps its default position:absolute (left:-34px;
-       bottom:28px) at every width. The portrait <img> and its gradient overlay in the
-       same .reveal column are position:absolute, so if this badge is switched to
-       position:static it becomes the column's only in-flow box and paints BELOW those
-       positioned siblings per CSS stacking order — visually this hid "LEADERS IMPACTED"
-       behind the portrait on mobile. Fixed 2026-09-25; do not re-add a static override
-       here without re-testing at 375/390/768px. */
+    #about-hero-card { position:static !important; margin-top:-40px; margin-left:20px; }
   }
   @media (max-width: 620px) {
     #values-grid { grid-template-columns:1fr !important; }
