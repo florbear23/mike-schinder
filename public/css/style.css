@@ -25,7 +25,8 @@ body { margin:0; background:#0a1420; }
     @media (max-width: 620px) {
       #audience-grid { grid-template-columns:1fr !important; }
       #stats-row { grid-template-columns:1fr !important; gap:16px !important; padding:20px 0 !important; }
-      #hero-cta-btn { display:block; text-align:center; }
+      #hero-cta-row { flex-direction:column !important; align-items:stretch !important; }
+      #hero-cta-row a { display:block !important; text-align:center; }
       #header-connect { display:none !important; }
     }
     @media (min-width: 760px) {
@@ -343,6 +344,9 @@ body { margin:0; background:#0a1420; }
 
 /* ---- 10 · FINAL CTA ---- */
 #final-cta-row { display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; }
+@media (max-width: 700px) {
+  #final-paths-grid { grid-template-columns:1fr !important; }
+}
 
 /* ---- RESPONSIVE — REVISED HOMEPAGE ---- */
 @media (max-width: 1150px) {
