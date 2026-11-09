@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
    If this URL is ever retired, set SKOOL_URL back to null and every CTA
    reverts to its existing fallback href automatically. */
-var SKOOL_URL = 'https://www.skool.com/stuck-to-unstuck/about?ref=21743062f3b44a1e9fe764fe8d482a5d';
+var SKOOL_URL = null; /* paused */
 
 document.addEventListener('DOMContentLoaded', function () {
   if (SKOOL_URL) {
