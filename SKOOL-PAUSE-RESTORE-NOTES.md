@@ -139,3 +139,167 @@ The decision-clarity system and tools for people who want structure, perspective
 var SKOOL_URL = 'https://www.skool.com/stuck-to-unstuck/about?ref=21743062f3b44a1e9fe764fe8d482a5d';
 ```
 
+
+---
+# Round 2 (info-only Human 10.0)
+
+## [9] index.html - index: "FREE RIGHT NOW" tag
+```
+ &middot; <span style="color:#7a5c1f;">FREE RIGHT NOW</span>
+```
+
+## [10] index.html - index: community bullet
+```
+<li>A community on the same question</li>
+```
+
+## [copy] programs.html - card label
+```
+03 — COMMUNITY &middot; <span style="color:#7a5c1f;">FREE</span>
+   ==>
+03 — SELF-GUIDED
+```
+
+## [copy] programs.html - subtitle
+```
+Work through it yourself, with structure and community.
+   ==>
+Work through it yourself, with structure.
+```
+
+## [copy] programs.html - best-for
+```
+I want the tools and community to work through
+   ==>
+I want the tools to work through
+```
+
+## [copy] programs.html - meta/og/twitter description
+```
+Human 10.0 (free community)
+   ==>
+Human 10.0 (self-guided)
+```
+
+## [copy] resources.html - tag
+```
+<span class="res-kicker">FREE COMMUNITY</span>
+   ==>
+<span class="res-kicker">SELF-GUIDED</span>
+```
+
+## [copy] what-i-do.html - meta/og/twitter description
+```
+through Human 10.0's free community system and the 30-Day Decision Sprint™,
+   ==>
+through Human 10.0, a decision-clarity system, and the 30-Day Decision Sprint™,
+```
+
+## [11] public/index.html - index: "FREE RIGHT NOW" tag
+```
+ &middot; <span style="color:#7a5c1f;">FREE RIGHT NOW</span>
+```
+
+## [12] public/index.html - index: community bullet
+```
+<li>A community on the same question</li>
+```
+
+## [copy] public/programs.html - card label
+```
+03 — COMMUNITY &middot; <span style="color:#7a5c1f;">FREE</span>
+   ==>
+03 — SELF-GUIDED
+```
+
+## [copy] public/programs.html - subtitle
+```
+Work through it yourself, with structure and community.
+   ==>
+Work through it yourself, with structure.
+```
+
+## [copy] public/programs.html - best-for
+```
+I want the tools and community to work through
+   ==>
+I want the tools to work through
+```
+
+## [copy] public/programs.html - meta/og/twitter description
+```
+Human 10.0 (free community)
+   ==>
+Human 10.0 (self-guided)
+```
+
+## [copy] public/resources.html - tag
+```
+<span class="res-kicker">FREE COMMUNITY</span>
+   ==>
+<span class="res-kicker">SELF-GUIDED</span>
+```
+
+## [copy] public/what-i-do.html - meta/og/twitter description
+```
+through Human 10.0's free community system and the 30-Day Decision Sprint™,
+   ==>
+through Human 10.0, a decision-clarity system, and the 30-Day Decision Sprint™,
+```
+
+
+---
+# Round 3
+
+## terms.html
+```
+including the Human 10.0 community,
+   ==>
+including Human 10.0,
+```
+
+## what-i-do.html
+```
+01 — THE SYSTEM &middot; FREE RIGHT NOW
+   ==>
+01 — THE SYSTEM &middot; SELF-GUIDED
+```
+
+## public/terms.html
+```
+including the Human 10.0 community,
+   ==>
+including Human 10.0,
+```
+
+## public/what-i-do.html
+```
+01 — THE SYSTEM &middot; FREE RIGHT NOW
+   ==>
+01 — THE SYSTEM &middot; SELF-GUIDED
+```
+
+## Mike Schindler Decision Architect.dc.html
+```
+The system, tools and community to help you gain clarity
+   ==>
+The system and tools to help you gain clarity
+```
+
+---
+# Round 4
+
+## terms.html
+```
+free resources, the mini-book, or the Human 10.0 community
+   ==>
+free resources, the mini-book, or Human 10.0
+```
+
+## public/terms.html
+```
+free resources, the mini-book, or the Human 10.0 community
+   ==>
+free resources, the mini-book, or Human 10.0
+```
+
